@@ -43,13 +43,13 @@ export default function HeroSection() {
                   Jeeban
                 </span>
               </div>
-              <p className="text-2xl sm:text-3xl font-medium text-[#CFC7D8]">Beura</p>
+              {/* <p className="text-2xl sm:text-3xl font-medium text-[#CFC7D8]">Beura</p> */}
             </div>
 
             {/* Job Title */}
             <div className="space-y-2">
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold">
-                <span className="text-[#D06BE3]">MERN Stack</span> <span className="text-[#FFFFFF]">Developer</span>
+                <span className="text-[#D06BE3]">Software</span> <span className="text-[#FFFFFF]">Developer</span>
               </h2>
             </div>
 
@@ -72,6 +72,23 @@ export default function HeroSection() {
                 <span className="relative text-[#1A0626] flex items-center space-x-2 group-hover:space-x-3 transition-all duration-300">
                   <span>My Projects</span>
                   <ExternalLink size={18} className="group-hover:rotate-45 transition-transform duration-300" />
+                </span>
+              </a>
+
+              {/* Resume Button */}
+              <a
+                href="https://res.cloudinary.com/dwwdodtcr/raw/upload/v1769600392/dmploi/resumes/egvhvq4nnhav89cu1xjo.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group relative px-8 py-3.5 rounded-full font-semibold border-2 border-[#E08AF0] overflow-hidden"
+              >
+                {/* Hover Background */}
+                <div className="absolute inset-0 bg-gradient-to-r from-[#E08AF0]/20 to-[#B84FD6]/20 opacity-0 group-hover:opacity-100 transition-all duration-300 rounded-full"></div>
+
+                {/* Content */}
+                <span className="relative text-[#FFFFFF] flex items-center space-x-2 group-hover:space-x-3 transition-all duration-300">
+                  <span>Resume</span>
+                  <Download size={18} className="group-hover:translate-y-1 transition-transform duration-300" />
                 </span>
               </a>
 

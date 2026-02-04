@@ -7,7 +7,7 @@ export default function GlassmorphismNavbar() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['home', 'about', 'skills', 'work', 'education', 'experience', 'contact'];
+      const sections = ['home', 'about', 'skills', 'services', 'work', 'education', 'experience', 'contact'];
       const scrollPosition = window.scrollY + 100; // Offset for navbar height
 
       for (const section of sections) {
@@ -30,6 +30,7 @@ export default function GlassmorphismNavbar() {
     { name: 'Home', href: '#home', id: 'home' },
     { name: 'About', href: '#about', id: 'about' },
     { name: 'Skills', href: '#skills', id: 'skills' },
+    { name: 'Services', href: '#services', id: 'services' },
     { name: 'Our Work', href: '#work', id: 'work' },
     { name: 'Education', href: '#education', id: 'education' },
     { name: 'Experience', href: '#experience', id: 'experience' },
@@ -91,7 +92,10 @@ export default function GlassmorphismNavbar() {
 
             {/* Contact Button - Desktop */}
             <div className="hidden lg:block">
-              <button className="relative group px-8 py-2.5 rounded-full font-semibold overflow-hidden">
+              <a
+                href="#contact"
+                className="relative group px-8 py-2.5 rounded-full font-semibold overflow-hidden block"
+              >
                 {/* Gradient Background */}
                 <div className="absolute inset-0 bg-gradient-to-r from-[#D06BE3] to-[#E08AF0] rounded-full shadow-lg shadow-[#E08AF0]/50 group-hover:shadow-[#E08AF0]/70 transition-all duration-300 group-hover:scale-105"></div>
 
@@ -99,19 +103,22 @@ export default function GlassmorphismNavbar() {
                 <div className="absolute inset-0 rounded-full bg-gradient-to-r from-transparent via-white to-transparent opacity-0 group-hover:opacity-20 transition-all duration-300 translate-x-full group-hover:translate-x-0"></div>
 
                 {/* Text */}
-                <span className="relative text-white text-sm flex items-center space-x-2">
-                  Contact Us
+                <span className="relative text-white text-sm flex items-center space-x-2 justify-center">
+                  <span>Contact Us</span>
                   <span className="group-hover:translate-x-1 transition-transform duration-300">→</span>
                 </span>
-              </button>
+              </a>
             </div>
 
             {/* Mobile Menu Button */}
             <div className="lg:hidden flex items-center space-x-4">
-              <button className="hidden sm:flex relative group px-6 py-2 rounded-full font-semibold overflow-hidden text-sm">
+              <a
+                href="#contact"
+                className="hidden sm:flex relative group px-6 py-2 rounded-full font-semibold overflow-hidden text-sm"
+              >
                 <div className="absolute inset-0 bg-gradient-to-r from-[#D06BE3] to-[#E08AF0] rounded-full shadow-lg shadow-[#E08AF0]/50"></div>
                 <span className="relative text-white">Contact</span>
-              </button>
+              </a>
 
               <button
                 onClick={() => setIsOpen(!isOpen)}
@@ -138,10 +145,14 @@ export default function GlassmorphismNavbar() {
                   {item.name}
                 </a>
               ))}
-              <button className="w-full mt-4 relative group px-6 py-3 rounded-full font-semibold overflow-hidden">
+              <a
+                href="#contact"
+                onClick={() => setIsOpen(false)}
+                className="w-full mt-4 relative group px-6 py-3 rounded-full font-semibold overflow-hidden block text-center"
+              >
                 <div className="absolute inset-0 bg-gradient-to-r from-[#D06BE3] to-[#E08AF0] rounded-full shadow-lg shadow-[#E08AF0]/50"></div>
                 <span className="relative text-white block">Contact Us</span>
-              </button>
+              </a>
             </div>
           )}
         </div>
