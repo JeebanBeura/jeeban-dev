@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .gradient-text {
+    @apply bg-gradient-to-r from-[#D06BE3] to-[#E08AF0] bg-clip-text text-transparent;
+  }
+  
+  .glow-purple {
+    @apply shadow-lg shadow-[#E08AF0]/50;
+  }
+}
