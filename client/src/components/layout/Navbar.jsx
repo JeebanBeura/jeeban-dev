@@ -1,9 +1,30 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 
 export default function GlassmorphismNavbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [activeLink, setActiveLink] = useState('home');
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = ['home', 'about', 'skills', 'work', 'education', 'experience', 'contact'];
+      const scrollPosition = window.scrollY + 100; // Offset for navbar height
+
+      for (const section of sections) {
+        const element = document.getElementById(section);
+        if (element) {
+          const { offsetTop, offsetHeight } = element;
+          if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
+            setActiveLink(section);
+            break;
+          }
+        }
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const menuItems = [
     { name: 'Home', href: '#home', id: 'home' },
@@ -51,8 +72,8 @@ export default function GlassmorphismNavbar() {
                   href={item.href}
                   onClick={() => handleLinkClick(item.id)}
                   className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 relative group ${activeLink === item.id
-                      ? 'text-[#E08AF0] bg-white/5'
-                      : 'text-[#FFFFFF]/80 hover:text-[#FFFFFF]'
+                    ? 'text-[#E08AF0] bg-white/5'
+                    : 'text-[#FFFFFF]/80 hover:text-[#FFFFFF]'
                     }`}
                 >
                   <span className="relative z-10">{item.name}</span>
@@ -110,8 +131,8 @@ export default function GlassmorphismNavbar() {
                   href={item.href}
                   onClick={() => handleLinkClick(item.id)}
                   className={`block px-4 py-3 rounded-lg font-medium transition-all duration-300 ${activeLink === item.id
-                      ? 'text-[#E08AF0] bg-gradient-to-r from-[#D06BE3]/20 to-[#E08AF0]/20'
-                      : 'text-[#FFFFFF]/80 hover:text-[#FFFFFF] hover:bg-white/5'
+                    ? 'text-[#E08AF0] bg-gradient-to-r from-[#D06BE3]/20 to-[#E08AF0]/20'
+                    : 'text-[#FFFFFF]/80 hover:text-[#FFFFFF] hover:bg-white/5'
                     }`}
                 >
                   {item.name}

@@ -91,28 +91,30 @@ export default function EducationSection() {
         </div>
 
         <div className="relative">
-          <div className="absolute left-1/2 top-0 bottom-0 w-0.5 -translate-x-1/2 bg-gradient-to-b from-[#B84FD6] to-[#E08AF0]"></div>
+          {/* Vertical Line - Left on Mobile, Center on Desktop */}
+          <div className="absolute left-8 md:left-1/2 top-0 bottom-0 w-0.5 md:-translate-x-1/2 bg-gradient-to-b from-[#B84FD6] to-[#E08AF0]"></div>
 
-          <div className="space-y-16">
+          <div className="space-y-12">
             {educationData.map((edu, index) => {
               const Icon = edu.icon;
               const isExpanded = expandedId === edu.id;
               const isLeft = index % 2 === 0;
 
               return (
-                <div key={edu.id} className="relative grid grid-cols-1 md:grid-cols-2 gap-8">
-                  <div className={`flex ${isLeft ? 'justify-end pr-12' : 'justify-end md:justify-start md:pr-0 md:pl-12'}`}>
+                <div key={edu.id} className="relative grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
+                  {/* Left Column (Desktop: Left Content, Mobile: Content if isLeft) */}
+                  <div className={`flex ${isLeft ? 'justify-start pl-20 md:justify-end md:pr-12 md:pl-0' : 'hidden md:flex md:justify-end md:pr-12'}`}>
                     {isLeft && (
                       <div
                         onClick={() => setExpandedId(isExpanded ? null : edu.id)}
-                        className="w-full max-w-xl cursor-pointer rounded-2xl bg-[#2A0A3D]/60 backdrop-blur-md border border-[#B84FD6]/40 p-6 hover:border-[#B84FD6]/80 transition"
+                        className="w-full max-w-xl cursor-pointer rounded-2xl bg-[#2A0A3D]/60 backdrop-blur-md border border-[#B84FD6]/40 p-6 hover:border-[#B84FD6]/80 transition text-left md:text-right"
                       >
                         <h3 className="text-white font-bold text-xl mb-1">{edu.degree}</h3>
                         <p className="text-[#CFC7D8] mb-2">{edu.institution}</p>
                         <p className="text-[#9C8FB1] text-sm">{edu.year} • {edu.location}</p>
 
                         {isExpanded && (
-                          <ul className="mt-4 space-y-2 text-sm text-[#CFC7D8]">
+                          <ul className="mt-4 space-y-2 text-sm text-[#CFC7D8] inline-block text-left">
                             {edu.achievements.map((a, i) => (
                               <li key={i}>• {a}</li>
                             ))}
@@ -120,19 +122,23 @@ export default function EducationSection() {
                         )}
                       </div>
                     )}
+                    {/* Spacer for right-side items on desktop */}
+                    {!isLeft && <div className="hidden md:block w-full"></div>}
                   </div>
 
-                  <div className="absolute left-1/2 top-6 -translate-x-1/2">
-                    <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#D06BE3] to-[#E08AF0] flex items-center justify-center">
+                  {/* Icon - Left on Mobile, Center on Desktop */}
+                  <div className="absolute left-8 md:left-1/2 top-0 md:top-6 -translate-x-1/2 z-10">
+                    <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#D06BE3] to-[#E08AF0] flex items-center justify-center border-4 border-[#1A0626]">
                       <Icon size={20} className="text-white" />
                     </div>
                   </div>
 
-                  <div className={`flex ${!isLeft ? 'justify-start pl-12' : 'justify-start md:justify-end md:pl-0 md:pr-12'}`}>
+                  {/* Right Column (Desktop: Right Content, Mobile: Content if !isLeft) */}
+                  <div className={`flex ${!isLeft ? 'justify-start pl-20 md:pl-12' : 'hidden md:flex md:justify-start md:pl-12'}`}>
                     {!isLeft && (
                       <div
                         onClick={() => setExpandedId(isExpanded ? null : edu.id)}
-                        className="w-full max-w-xl cursor-pointer rounded-2xl bg-[#2A0A3D]/60 backdrop-blur-md border border-[#B84FD6]/40 p-6 hover:border-[#B84FD6]/80 transition"
+                        className="w-full max-w-xl cursor-pointer rounded-2xl bg-[#2A0A3D]/60 backdrop-blur-md border border-[#B84FD6]/40 p-6 hover:border-[#B84FD6]/80 transition text-left"
                       >
                         <h3 className="text-white font-bold text-xl mb-1">{edu.degree}</h3>
                         <p className="text-[#CFC7D8] mb-2">{edu.institution}</p>
@@ -147,6 +153,8 @@ export default function EducationSection() {
                         )}
                       </div>
                     )}
+                    {/* Spacer for left-side items on desktop */}
+                    {isLeft && <div className="hidden md:block w-full"></div>}
                   </div>
                 </div>
               );

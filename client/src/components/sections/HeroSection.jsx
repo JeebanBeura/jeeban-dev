@@ -12,7 +12,7 @@ import {
   Code2,
   Palette
 } from 'lucide-react';
-
+import heroImage from '../../assets/jeeban2.jpeg';
 export default function HeroSection() {
   return (
     <section id='home' className="relative min-h-screen bg-gradient-to-br from-[#1A0626] via-[#4B0F6B] to-[#8A2BAE] pt-32 pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
@@ -144,13 +144,12 @@ export default function HeroSection() {
                   <div className="w-72 h-80 sm:w-80 sm:h-96 rounded-2xl bg-gradient-to-br from-[#B84FD6]/40 to-[#E08AF0]/30 backdrop-blur-sm border border-[#E08AF0]/20 flex items-center justify-center relative overflow-hidden group/avatar">
 
                     {/* Avatar Content */}
-                    <div className="text-center space-y-4 z-10">
-                      {/* Avatar Image Placeholder */}
-                      <div className="flex justify-center">
-                        <div className="w-40 h-40 sm:w-48 sm:h-48 rounded-2xl bg-gradient-to-br from-[#D06BE3] to-[#E08AF0] flex items-center justify-center shadow-2xl shadow-[#B84FD6]/50 group-hover/avatar:scale-110 transition-transform duration-300">
-                          <Code2 size={80} className="text-white opacity-90" />
-                        </div>
-                      </div>
+                    <div className="z-10 w-full h-full">
+                      <img
+                        src={heroImage}
+                        alt="Jeeban Beura"
+                        className="w-full h-full object-cover rounded-xl shadow-2xl group-hover/avatar:scale-105 transition-transform duration-500"
+                      />
                     </div>
 
                     {/* Floating Decorative Elements */}
@@ -181,7 +180,10 @@ export default function HeroSection() {
 
         {/* Scroll Down Indicator */}
         <div className="flex justify-center mt-16 lg:mt-0 lg:absolute lg:bottom-10 lg:left-1/2 lg:-translate-x-1/2">
-          <div className="group cursor-pointer">
+          <div
+            onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
+            className="group cursor-pointer"
+          >
             <div className="w-8 h-12 rounded-full border-2 border-[#B84FD6] flex justify-center p-2 animate-bounce">
               <ChevronDown size={20} className="text-[#B84FD6] group-hover:text-[#E08AF0] transition-colors duration-300 animate-bounce" />
             </div>

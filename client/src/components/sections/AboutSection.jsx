@@ -1,6 +1,6 @@
 import React from 'react';
 import { Sparkles, Award, Target, Heart, Code2, Palette } from 'lucide-react';
-
+import aboutImage from '../../assets/jeeban2.jpeg';
 export default function AboutSection() {
 
   return (
@@ -34,9 +34,13 @@ export default function AboutSection() {
               <div className="absolute -inset-4 bg-gradient-to-br from-[#D06BE3] to-[#E08AF0] rounded-full opacity-30 blur-2xl"></div>
 
               {/* Avatar Frame */}
-              <div className="relative w-64 h-64 sm:w-72 sm:h-72 rounded-full bg-gradient-to-br from-[#B84FD6] to-[#E08AF0] flex items-center justify-center shadow-2xl shadow-[#B84FD6]/40">
-                <div className="absolute inset-2 rounded-full bg-gradient-to-br from-[#D06BE3]/40 to-[#E08AF0]/30 backdrop-blur-sm border border-white/20 flex items-center justify-center">
-                  <div className="text-8xl">👩‍💼</div>
+              <div className="relative w-96 h-96 sm:w-72 sm:h-72 rounded-full bg-gradient-to-br from-[#B84FD6] to-[#E08AF0] flex items-center justify-center shadow-2xl shadow-[#B84FD6]/40">
+                <div className="absolute inset-2 rounded-full bg-gradient-to-br from-[#D06BE3]/40 to-[#E08AF0]/30 backdrop-blur-sm border border-white/20 flex items-center justify-center overflow-hidden">
+                  <img
+                    src={aboutImage}
+                    alt="Jeeban Beura"
+                    className="w-full h-full object-cover"
+                  />
                 </div>
               </div>
 
@@ -64,6 +68,17 @@ export default function AboutSection() {
               <p className="text-[#CFC7D8] text-base sm:text-lg leading-relaxed mb-6">
                 I specialize in RESTful API development, real-time communication with Socket.io, and cross-platform application development. I transform ideas into seamless functional solutions that meet business requirements.
               </p>
+
+              {/* LinkedIn Link */}
+              <a
+                href="https://www.linkedin.com/in/jeeban-beura/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center space-x-2 text-[#E08AF0] font-semibold hover:text-white transition-colors duration-300"
+              >
+                <span>View LinkedIn Profile</span>
+                <span className="text-xl">→</span>
+              </a>
             </div>
 
             {/* Highlight Box */}
