@@ -7,30 +7,30 @@ export default function ProjectsSection() {
   const projects = [
     {
       id: 1,
-      title: 'Amaksora App',
-      category: 'App Design',
-      description: 'Creating intuitive and visually appealing designs that enhance user experience.',
-      image: 'https://images.unsplash.com/photo-1561070791-2526d30994b5?w=500&h=500&fit=crop',
+      title: 'E-Tech Education Platform',
+      category: 'Full Stack',
+      description: 'Course management, attendance tracking, and automated scheduling system with secure JWT authentication.',
+      image: 'https://images.unsplash.com/photo-1546410531-bb4caa6b424d?w=500&h=500&fit=crop',
       color: 'from-blue-500 to-purple-600',
-      tags: ['Mobile App', 'UI Design', 'iOS']
+      tags: ['React', 'Node.js', 'MongoDB', 'Express']
+    },
+    {
+      id: 2,
+      title: 'Tour & Travel Booking',
+      category: 'Web App',
+      description: 'Comprehensive booking system with package management, payment gateway integration, and diverse user roles.',
+      image: 'https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=500&h=500&fit=crop',
+      color: 'from-orange-500 to-red-600',
+      tags: ['React', 'Tailwind CSS', 'REST API']
     },
     {
       id: 3,
-      title: 'B-Roll Media',
-      category: 'Web Design',
-      description: 'Designing intuitive and visually engaging websites that elevate user experience.',
-      image: 'https://images.unsplash.com/photo-1561070791-2526d30994b5?w=500&h=500&fit=crop',
-      color: 'from-orange-500 to-red-600',
-      tags: ['Web Design', 'Responsive', 'UX']
-    },
-    {
-      id: 5,
-      title: 'Echo Music Player',
-      category: 'App Design',
-      description: 'Crafting beautiful music streaming interface with seamless user navigation.',
-      image: 'https://images.unsplash.com/photo-1459749411175-04bf5292ceea?w=500&h=500&fit=crop',
+      title: 'Real Estate Platform',
+      category: 'Web App',
+      description: 'Property search platform with advanced filters and inquiry submission forms.',
+      image: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=500&h=500&fit=crop',
       color: 'from-indigo-500 to-purple-600',
-      tags: ['Mobile App', 'Music', 'UI']
+      tags: ['React', 'CSS3', 'Forms']
     }
   ];
 
@@ -63,30 +63,30 @@ export default function ProjectsSection() {
             >
               {/* Card Container */}
               <div className="h-full rounded-2xl overflow-hidden bg-[#2A0A3D]/60 backdrop-blur-md border border-[#8A2BAE]/40 hover:border-[#B84FD6]/80 transition-all duration-300 hover:shadow-2xl hover:shadow-[#B84FD6]/50 hover:-translate-y-2">
-                
+
                 {/* Image Container */}
                 <div className="relative h-64 overflow-hidden bg-gradient-to-br from-[#1A0626] to-[#2A0A3D]">
                   {/* Project Image */}
-                  <img 
-                    src={project.image} 
+                  <img
+                    src={project.image}
                     alt={project.title}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                   />
-                  
+
                   {/* Overlay Gradient */}
                   <div className="absolute inset-0 bg-gradient-to-t from-[#2A0A3D]/80 via-transparent to-transparent"></div>
 
                   {/* Hover Overlay with Links */}
                   <div className="absolute inset-0 bg-gradient-to-br from-[#D06BE3]/40 to-[#E08AF0]/40 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-center justify-center space-x-4">
-                    <a 
-                      href="#" 
+                    <a
+                      href="#"
                       className="p-3 rounded-full bg-white/20 backdrop-blur-md border border-white/30 hover:bg-white/30 transition-all duration-300 hover:scale-110"
                       title="View Project"
                     >
                       <ExternalLink size={20} className="text-white" />
                     </a>
-                    <a 
-                      href="#" 
+                    <a
+                      href="#"
                       className="p-3 rounded-full bg-white/20 backdrop-blur-md border border-white/30 hover:bg-white/30 transition-all duration-300 hover:scale-110"
                       title="View Code"
                     >
@@ -117,7 +117,7 @@ export default function ProjectsSection() {
                   {/* Tags */}
                   <div className="flex flex-wrap gap-2 pt-2">
                     {project.tags.map((tag, index) => (
-                      <span 
+                      <span
                         key={index}
                         className="px-3 py-1 rounded-full text-xs font-medium bg-[#B84FD6]/20 border border-[#B84FD6]/40 text-[#CFC7D8] group-hover:border-[#B84FD6]/70 group-hover:bg-[#B84FD6]/40 group-hover:text-[#FFFFFF] transition-all duration-300"
                       >
@@ -128,8 +128,8 @@ export default function ProjectsSection() {
 
                   {/* View More Button */}
                   <div className="pt-4">
-                    <a 
-                      href="#" 
+                    <a
+                      href="#"
                       className="inline-flex items-center space-x-2 text-[#E08AF0] font-semibold group/link hover:text-white transition-colors duration-300"
                     >
                       <span>View Project</span>

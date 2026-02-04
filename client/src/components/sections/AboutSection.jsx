@@ -20,7 +20,7 @@ export default function AboutSection() {
 
         {/* Main Content Grid */}
         <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
-          
+
           {/* Left - Avatar with Decorative Elements */}
           <div className="relative flex justify-center">
             {/* Floating Decoration Elements */}
@@ -58,11 +58,11 @@ export default function AboutSection() {
             {/* Main Description */}
             <div>
               <p className="text-[#CFC7D8] text-base sm:text-lg leading-relaxed mb-6">
-                Welcome to my portfolio! I'm Sara Howari, a passionate UI/UX designer dedicated to creating seamless and visually engaging digital experiences. With 2 years of experience, I specialize in designing intuitive interfaces that enhance usability and user satisfaction.
+                Welcome to my portfolio! I'm Jeeban Beura, a passionate MERN Stack Developer with 1+ year of experience building responsive web and mobile applications. Proficient in React.js, React Native, Node.js, Express.js, and MongoDB.
               </p>
-              
+
               <p className="text-[#CFC7D8] text-base sm:text-lg leading-relaxed mb-6">
-                My skills include wireframing, prototyping, and user research, ensuring that each design is both aesthetically pleasing and functionally efficient. I have worked on diverse projects, including mobile apps, web platforms, and interactive dashboards, always focusing on user-centered solutions that drive engagement.
+                I specialize in RESTful API development, real-time communication with Socket.io, and cross-platform application development. I transform ideas into seamless functional solutions that meet business requirements.
               </p>
             </div>
 

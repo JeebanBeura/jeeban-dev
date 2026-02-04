@@ -8,63 +8,63 @@ export default function SkillsSection() {
   const skills = [
     {
       id: 1,
-      name: 'UI Design',
-      icon: Palette,
-      color: 'text-pink-400'
-    },
-    {
-      id: 2,
-      name: 'Figma',
-      icon: Figma,
-      color: 'text-purple-400'
-    },
-    {
-      id: 3,
-      name: 'Prototyping',
-      icon: Zap,
-      color: 'text-yellow-400'
-    },
-    {
-      id: 4,
-      name: 'Web Design',
+      name: 'React.js',
       icon: Code2,
-      color: 'text-blue-400'
-    },
-    {
-      id: 5,
-      name: 'Mobile Design',
-      icon: Smartphone,
       color: 'text-cyan-400'
     },
     {
-      id: 6,
-      name: 'UX Design',
-      icon: Airplay,
+      id: 2,
+      name: 'React Native',
+      icon: Smartphone,
+      color: 'text-blue-400'
+    },
+    {
+      id: 3,
+      name: 'Node.js',
+      icon: Terminal,
       color: 'text-green-400'
     },
     {
+      id: 4,
+      name: 'Express.js',
+      icon: Zap,
+      color: 'text-gray-400'
+    },
+    {
+      id: 5,
+      name: 'MongoDB',
+      icon: Code2,
+      color: 'text-green-500'
+    },
+    {
+      id: 6,
+      name: 'Socket.io',
+      icon: Airplay,
+      color: 'text-white'
+    },
+    {
       id: 7,
-      name: 'Design Systems',
-      icon: Layers,
-      color: 'text-orange-400'
+      name: 'Tailwind CSS',
+      icon: Palette,
+      color: 'text-cyan-300'
     },
     {
       id: 8,
-      name: 'Interaction Design',
-      icon: Terminal,
-      color: 'text-red-400'
+      name: 'JavaScript (ES6+)',
+      icon: Code2,
+      color: 'text-yellow-400'
     },
     {
       id: 9,
-      name: 'User Research',
-      icon: Code2,
-      color: 'text-indigo-400'
+      name: 'RESTful APIs',
+      icon: Layers,
+      color: 'text-purple-400'
     },
     {
       id: 10,
-      name: 'Wireframing',
-      icon: Layers,
-      color: 'text-rose-400'
+      name: 'Git & GitHub',
+      icon: Terminal,
+      color: 'text-orange-500'
     }
   ];
 
@@ -90,7 +90,7 @@ export default function SkillsSection() {
         </div>
 
         {/* Horizontal Scrolling Skills Container */}
-        <div 
+        <div
           className="relative w-full overflow-hidden py-8"
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
@@ -100,7 +100,7 @@ export default function SkillsSection() {
           <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-[#1A0626] via-[#1A0626]/50 to-transparent z-10 pointer-events-none"></div>
 
           {/* Scrolling Container */}
-          <div 
+          <div
             className={`flex gap-6 ${isHovered ? '' : 'animate-scroll'}`}
             style={{
               animation: isHovered ? 'none' : 'scroll 40s linear infinite',
@@ -115,7 +115,7 @@ export default function SkillsSection() {
                 >
                   {/* Skill Card */}
                   <div className="h-full p-6 rounded-2xl bg-[#2A0A3D]/60 backdrop-blur-xl border border-[#B84FD6]/40 hover:border-[#B84FD6]/80 transition-all duration-300 hover:shadow-lg hover:shadow-[#B84FD6]/40 flex items-center space-x-6 cursor-default">
-                    
+
                     {/* Icon Container */}
                     <div className="flex-shrink-0">
                       <div className="relative w-16 h-16 rounded-xl bg-gradient-to-br from-[#D06BE3]/30 to-[#E08AF0]/20 border border-[#B84FD6]/30 flex items-center justify-center group-hover:scale-110 group-hover:border-[#B84FD6]/60 transition-all duration-300 group-hover:shadow-lg group-hover:shadow-[#B84FD6]/30">

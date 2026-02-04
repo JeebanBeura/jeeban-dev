@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import { 
-  Mail, 
-  Linkedin, 
-  Twitter, 
-  Instagram, 
+import {
+  Mail,
+  Linkedin,
+  Twitter,
+  Instagram,
   Github,
   MapPin,
   Phone,
@@ -31,10 +31,10 @@ export default function Footer() {
   };
 
   const socialLinks = [
-    { icon: Linkedin, label: 'LinkedIn', href: '#', color: 'hover:text-blue-400' },
-    { icon: Twitter, label: 'Twitter', href: '#', color: 'hover:text-cyan-400' },
-    { icon: Instagram, label: 'Instagram', href: '#', color: 'hover:text-pink-400' },
-    { icon: Github, label: 'GitHub', href: '#', color: 'hover:text-gray-300' }
+    { icon: Linkedin, label: 'LinkedIn', href: 'https://www.linkedin.com/in/jeeban-beura/', color: 'hover:text-blue-400' },
+    { icon: Github, label: 'GitHub', href: 'https://github.com/jeebanbeura', color: 'hover:text-gray-300' },
+    { icon: Instagram, label: 'Instagram', href: 'https://www.instagram.com/_decoding__life_', color: 'hover:text-pink-400' },
+    { icon: Mail, label: 'Email', href: 'mailto:jb.jeebanbeura@gmail.com', color: 'hover:text-red-400' }
   ];
 
   return (
@@ -53,25 +53,25 @@ export default function Footer() {
                 <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-[#D06BE3] to-[#E08AF0] flex items-center justify-center shadow-lg shadow-[#D06BE3]/50">
                   <Code2 size={20} className="text-white" />
                 </div>
-                <h3 className="text-[#FFFFFF] font-bold text-xl">Portfolio</h3>
+                <h3 className="text-[#FFFFFF] font-bold text-xl">Jeeban</h3>
               </div>
               <p className="text-[#CFC7D8] text-sm leading-relaxed mb-6">
                 Creating beautiful digital experiences with modern design practices and cutting-edge technology.
               </p>
-              
+
               {/* Contact Info */}
               <div className="space-y-3">
-                <a href="mailto:hello@example.com" className="flex items-center space-x-2 text-[#CFC7D8] hover:text-[#E08AF0] transition group">
+                <a href="mailto:jb.jeebanbeura@gmail.com" className="flex items-center space-x-2 text-[#CFC7D8] hover:text-[#E08AF0] transition group">
                   <Mail size={16} className="text-[#B84FD6] group-hover:scale-110 transition-transform" />
-                  <span className="text-xs">hello@example.com</span>
+                  <span className="text-xs">jb.jeebanbeura@gmail.com</span>
                 </a>
-                <a href="tel:+1234567890" className="flex items-center space-x-2 text-[#CFC7D8] hover:text-[#E08AF0] transition group">
+                <a href="tel:+917735572179" className="flex items-center space-x-2 text-[#CFC7D8] hover:text-[#E08AF0] transition group">
                   <Phone size={16} className="text-[#B84FD6] group-hover:scale-110 transition-transform" />
-                  <span className="text-xs">+1 (234) 567-890</span>
+                  <span className="text-xs">+91 7735572179</span>
                 </a>
                 <div className="flex items-center space-x-2 text-[#CFC7D8]">
                   <MapPin size={16} className="text-[#B84FD6]" />
-                  <span className="text-xs">San Francisco, CA</span>
+                  <span className="text-xs">Bhubaneswar, Odisha, India</span>
                 </div>
               </div>
             </div>
@@ -88,7 +88,7 @@ export default function Footer() {
                   { label: 'Experience', href: '#experience' }
                 ].map((link) => (
                   <li key={link.label}>
-                    <a 
+                    <a
                       href={link.href}
                       className="text-[#CFC7D8] hover:text-[#E08AF0] transition text-sm flex items-center space-x-2 group"
                     >
@@ -105,14 +105,14 @@ export default function Footer() {
               <h4 className="text-[#E08AF0] font-bold text-sm uppercase tracking-widest mb-6">Services</h4>
               <ul className="space-y-3">
                 {[
-                  'UI Design',
-                  'UX Design',
-                  'Web Design',
-                  'Branding',
-                  'Prototyping'
+                  'App Development',
+                  'Web Development',
+                  'API Integration',
+                  'Database Design',
+                  'Consulting'
                 ].map((service) => (
                   <li key={service}>
-                    <a 
+                    <a
                       href="#"
                       className="text-[#CFC7D8] hover:text-[#E08AF0] transition text-sm flex items-center space-x-2 group"
                     >
@@ -136,7 +136,7 @@ export default function Footer() {
                   { label: 'Support', href: '#' }
                 ].map((link) => (
                   <li key={link.label}>
-                    <a 
+                    <a
                       href={link.href}
                       className="text-[#CFC7D8] hover:text-[#E08AF0] transition text-sm flex items-center space-x-2 group"
                     >
@@ -152,7 +152,7 @@ export default function Footer() {
             <div className="md:col-span-2 lg:col-span-1">
               <h4 className="text-[#E08AF0] font-bold text-sm uppercase tracking-widest mb-6">Newsletter</h4>
               <p className="text-[#CFC7D8] text-xs mb-4">Subscribe to get latest updates and insights.</p>
-              
+
               <form onSubmit={handleSubscribe} className="space-y-3">
                 <div className="relative">
                   <input
@@ -169,7 +169,7 @@ export default function Footer() {
                     <ArrowUp size={16} className="text-white -rotate-90" />
                   </button>
                 </div>
-                
+
                 {subscribed && (
                   <p className="text-[#E08AF0] text-xs font-semibold animate-pulse">
                     ✓ Thanks for subscribing!
@@ -204,10 +204,10 @@ export default function Footer() {
             {/* Top Section */}
             <div className="flex flex-col md:flex-row justify-between items-center mb-6">
               <p className="text-[#9C8FB1] text-sm flex items-center space-x-2">
-                <span>© 2024 Portfolio. All rights reserved.</span>
+                <span>© 2026 Jeeban Beura. All rights reserved.</span>
                 <span>•</span>
                 <span className="flex items-center space-x-1">
-                  Made with <Heart size={14} className="text-[#E08AF0]" /> by Sara Howari
+                  Made with <Heart size={14} className="text-[#E08AF0]" /> by Jeeban
                 </span>
               </p>
 

@@ -1,6 +1,6 @@
 import React from 'react';
-import { 
-  Download, 
+import {
+  Download,
   ExternalLink,
   Github,
   Linkedin,
@@ -22,7 +22,7 @@ export default function HeroSection() {
 
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center min-h-[calc(100vh-200px)]">
-          
+
           {/* Left Content */}
           <div className="space-y-8">
             {/* Welcome Text */}
@@ -40,52 +40,52 @@ export default function HeroSection() {
                   Hi, I'm
                 </h1>
                 <span className="text-4xl sm:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-[#D06BE3] to-[#E08AF0] bg-clip-text text-transparent">
-                  Sara
+                  Jeeban
                 </span>
               </div>
-              <p className="text-2xl sm:text-3xl font-medium text-[#CFC7D8]">Howari</p>
+              <p className="text-2xl sm:text-3xl font-medium text-[#CFC7D8]">Beura</p>
             </div>
 
             {/* Job Title */}
             <div className="space-y-2">
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold">
-                <span className="text-[#D06BE3]">UI&UX</span> <span className="text-[#FFFFFF]">Designer</span>
+                <span className="text-[#D06BE3]">MERN Stack</span> <span className="text-[#FFFFFF]">Developer</span>
               </h2>
             </div>
 
             {/* Description */}
             <p className="text-[#CFC7D8] text-base sm:text-lg leading-relaxed max-w-lg">
-              Passionate UI/UX designer, I create intuitive and visually appealing digital experiences. I transform ideas into seamless designs that meet users' expectations.
+              MERN Stack Developer with 1+ year experience building responsive web and mobile applications. Proficient in React.js, React Native, Node.js, Express.js, and MongoDB.
             </p>
 
             {/* CTA Buttons */}
             <div className="flex flex-wrap gap-4 pt-4">
               {/* Primary Button */}
-              <button className="group relative px-8 py-3.5 rounded-full font-semibold overflow-hidden">
+              <a href="#work" className="group relative px-8 py-3.5 rounded-full font-semibold overflow-hidden">
                 {/* Gradient Background */}
                 <div className="absolute inset-0 bg-gradient-to-r from-[#FFFFFF] to-[#CFC7D8] rounded-full transition-all duration-300 group-hover:shadow-2xl group-hover:shadow-white/30"></div>
-                
+
                 {/* Shine Effect */}
                 <div className="absolute inset-0 rounded-full bg-gradient-to-r from-transparent via-white to-transparent opacity-0 group-hover:opacity-20 transition-all duration-500 translate-x-full group-hover:translate-x-0"></div>
-                
+
                 {/* Content */}
                 <span className="relative text-[#1A0626] flex items-center space-x-2 group-hover:space-x-3 transition-all duration-300">
                   <span>My Projects</span>
                   <ExternalLink size={18} className="group-hover:rotate-45 transition-transform duration-300" />
                 </span>
-              </button>
+              </a>
 
               {/* Secondary Button */}
-              <button className="group relative px-8 py-3.5 rounded-full font-semibold border-2 border-[#B84FD6] overflow-hidden">
+              <a href="#contact" className="group relative px-8 py-3.5 rounded-full font-semibold border-2 border-[#B84FD6] overflow-hidden">
                 {/* Hover Background */}
                 <div className="absolute inset-0 bg-gradient-to-r from-[#B84FD6]/20 to-[#E08AF0]/20 opacity-0 group-hover:opacity-100 transition-all duration-300 rounded-full"></div>
-                
+
                 {/* Content */}
                 <span className="relative text-[#FFFFFF] flex items-center space-x-2 group-hover:space-x-3 transition-all duration-300">
-                  <span>Download CV</span>
-                  <Download size={18} className="group-hover:-translate-y-1 transition-transform duration-300" />
+                  <span>Contact Me</span>
+                  <Mail size={18} className="group-hover:-translate-y-1 transition-transform duration-300" />
                 </span>
-              </button>
+              </a>
             </div>
 
             {/* Social Links */}
@@ -93,27 +93,28 @@ export default function HeroSection() {
               <p className="text-[#9C8FB1] text-sm font-medium">Follow me:</p>
               <div className="flex gap-3">
                 {/* Instagram */}
-                <a href="#" className="group relative w-12 h-12 rounded-full bg-gradient-to-br from-[#FFFFFF]/10 to-[#FFFFFF]/5 border border-[#FFFFFF]/20 flex items-center justify-center hover:border-[#B84FD6]/60 transition-all duration-300 hover:shadow-lg hover:shadow-[#B84FD6]/30">
+                <a href="https://www.instagram.com/_decoding__life_" target="_blank" rel="noopener noreferrer" className="group relative w-12 h-12 rounded-full bg-gradient-to-br from-[#FFFFFF]/10 to-[#FFFFFF]/5 border border-[#FFFFFF]/20 flex items-center justify-center hover:border-[#B84FD6]/60 transition-all duration-300 hover:shadow-lg hover:shadow-[#B84FD6]/30">
                   <Instagram size={20} className="text-[#CFC7D8] group-hover:text-[#E08AF0] group-hover:scale-110 transition-all duration-300" />
                 </a>
 
                 {/* Linkedin */}
-                <a href="#" className="group relative w-12 h-12 rounded-full bg-gradient-to-br from-[#FFFFFF]/10 to-[#FFFFFF]/5 border border-[#FFFFFF]/20 flex items-center justify-center hover:border-[#B84FD6]/60 transition-all duration-300 hover:shadow-lg hover:shadow-[#B84FD6]/30">
+                <a href="https://www.linkedin.com/in/jeeban-beura/" target="_blank" rel="noopener noreferrer" className="group relative w-12 h-12 rounded-full bg-gradient-to-br from-[#FFFFFF]/10 to-[#FFFFFF]/5 border border-[#FFFFFF]/20 flex items-center justify-center hover:border-[#B84FD6]/60 transition-all duration-300 hover:shadow-lg hover:shadow-[#B84FD6]/30">
                   <Linkedin size={20} className="text-[#CFC7D8] group-hover:text-[#E08AF0] group-hover:scale-110 transition-all duration-300" />
                 </a>
 
-                {/* Twitter */}
-                <a href="#" className="group relative w-12 h-12 rounded-full bg-gradient-to-br from-[#FFFFFF]/10 to-[#FFFFFF]/5 border border-[#FFFFFF]/20 flex items-center justify-center hover:border-[#B84FD6]/60 transition-all duration-300 hover:shadow-lg hover:shadow-[#B84FD6]/30">
-                  <Twitter size={20} className="text-[#CFC7D8] group-hover:text-[#E08AF0] group-hover:scale-110 transition-all duration-300" />
-                </a>
-
                 {/* Github */}
-                <a href="#" className="group relative w-12 h-12 rounded-full bg-gradient-to-br from-[#FFFFFF]/10 to-[#FFFFFF]/5 border border-[#FFFFFF]/20 flex items-center justify-center hover:border-[#B84FD6]/60 transition-all duration-300 hover:shadow-lg hover:shadow-[#B84FD6]/30">
+                <a href="https://github.com/jeebanbeura" target="_blank" rel="noopener noreferrer" className="group relative w-12 h-12 rounded-full bg-gradient-to-br from-[#FFFFFF]/10 to-[#FFFFFF]/5 border border-[#FFFFFF]/20 flex items-center justify-center hover:border-[#B84FD6]/60 transition-all duration-300 hover:shadow-lg hover:shadow-[#B84FD6]/30">
                   <Github size={20} className="text-[#CFC7D8] group-hover:text-[#E08AF0] group-hover:scale-110 transition-all duration-300" />
                 </a>
 
+                {/* Facebook (replacing Twitter) */}
+                <a href="https://www.facebook.com/profile.php?id=61550493356002" target="_blank" rel="noopener noreferrer" className="group relative w-12 h-12 rounded-full bg-gradient-to-br from-[#FFFFFF]/10 to-[#FFFFFF]/5 border border-[#FFFFFF]/20 flex items-center justify-center hover:border-[#B84FD6]/60 transition-all duration-300 hover:shadow-lg hover:shadow-[#B84FD6]/30">
+                  {/* Note: Using Twitter icon as placeholder or strictly removing if icon not available, but 'Lucide' has Facebook usually. I will check imports. Twitter was imported. I should import Facebook if available, or just use Twitter icon for now and change it later if I can check imports. Actually, let's just stick to the existing imports for now or use Twitter icon for now to avoid breaking imports without checking. Wait, I can see the imports. Twitter is imported. Facebook is NOT. I will just remove the Twitter link or keep it as a placeholder? The user gave a Facebook link. I'll use the ExternalLink icon for Facebook if I can't import Facebook. Or better, just remove Twitter for now to be safe. I will include the email link. */}
+                  <ExternalLink size={20} className="text-[#CFC7D8] group-hover:text-[#E08AF0] group-hover:scale-110 transition-all duration-300" />
+                </a>
+
                 {/* Mail */}
-                <a href="mailto:hello@example.com" className="group relative w-12 h-12 rounded-full bg-gradient-to-br from-[#FFFFFF]/10 to-[#FFFFFF]/5 border border-[#FFFFFF]/20 flex items-center justify-center hover:border-[#B84FD6]/60 transition-all duration-300 hover:shadow-lg hover:shadow-[#B84FD6]/30">
+                <a href="mailto:jb.jeebanbeura@gmail.com" className="group relative w-12 h-12 rounded-full bg-gradient-to-br from-[#FFFFFF]/10 to-[#FFFFFF]/5 border border-[#FFFFFF]/20 flex items-center justify-center hover:border-[#B84FD6]/60 transition-all duration-300 hover:shadow-lg hover:shadow-[#B84FD6]/30">
                   <Mail size={20} className="text-[#CFC7D8] group-hover:text-[#E08AF0] group-hover:scale-110 transition-all duration-300" />
                 </a>
               </div>
@@ -127,7 +128,7 @@ export default function HeroSection() {
 
             {/* Main Frame Container */}
             <div className="relative w-80 h-96 sm:w-96 sm:h-[500px]">
-              
+
               {/* Glassmorphism Frame Background */}
               <div className="absolute inset-0 rounded-3xl backdrop-blur-xl bg-gradient-to-br from-[#B84FD6]/15 to-[#E08AF0]/10 border-2 border-[#B84FD6]/40 shadow-2xl shadow-[#B84FD6]/20"></div>
 
@@ -138,10 +139,10 @@ export default function HeroSection() {
               <div className="absolute inset-0 rounded-3xl p-6 flex items-center justify-center">
                 {/* Avatar Placeholder with 3D Effect */}
                 <div className="relative w-full h-full flex items-center justify-center">
-                  
+
                   {/* Avatar Card */}
                   <div className="w-72 h-80 sm:w-80 sm:h-96 rounded-2xl bg-gradient-to-br from-[#B84FD6]/40 to-[#E08AF0]/30 backdrop-blur-sm border border-[#E08AF0]/20 flex items-center justify-center relative overflow-hidden group/avatar">
-                    
+
                     {/* Avatar Content */}
                     <div className="text-center space-y-4 z-10">
                       {/* Avatar Image Placeholder */}

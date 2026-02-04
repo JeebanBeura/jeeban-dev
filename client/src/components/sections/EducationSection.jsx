@@ -7,68 +7,68 @@ export default function EducationSection() {
   const educationData = [
     {
       id: 1,
-      degree: 'Master of Arts in Digital Design',
-      institution: 'Institute of Creative Technology',
-      location: 'San Francisco, CA',
-      year: '2022 - 2024',
-      gpa: '3.9/4.0',
-      description: 'Advanced studies in digital design principles, UX research methodologies, and interactive media design.',
+      degree: 'Master of Computer Applications (MCA)',
+      institution: 'Gandhi Institute for Education and Technology (GIET)',
+      location: 'Bhubaneswar, Odisha',
+      year: 'Aug 2025 – May 2027',
+      gpa: 'Pursuing',
+      description: 'Advanced studies in Computer Applications, Software Engineering, and Database Management.',
       achievements: [
-        'Thesis: "Human-Centered Design in AI Interfaces"',
-        "Dean's List for two consecutive years",
-        'Best Design Project Award 2024',
-        'Published research on UX trends'
+        'Specializing in Full Stack Development',
+        'Active participation in coding hackathons',
+        'Member of Technical Society',
+        'Focus on Advanced Algorithms'
       ],
       icon: GraduationCap,
       color: 'from-pink-500 to-rose-600'
     },
     {
       id: 2,
-      degree: 'Bachelor of Science in Graphic Design',
-      institution: 'Global Design University',
-      location: 'New York, NY',
-      year: '2018 - 2022',
-      gpa: '3.8/4.0',
-      description: 'Comprehensive education in visual design, branding, typography, and digital media production.',
+      degree: 'B.Sc. in Information Technology & Management',
+      institution: 'NIIS Institute of Information Science and Management',
+      location: 'Bhubaneswar, Odisha',
+      year: 'Sep 2022 – May 2025',
+      gpa: 'Graduated',
+      description: 'Comprehensive foundation in IT management, programming, and system analysis.',
       achievements: [
-        'Graduated Summa Cum Laude',
-        'President of Design Club',
-        'Internship at Adobe Design Studio',
-        'Featured in Design Magazine'
+        'Core focus on Web Technologies',
+        'Database Management Systems',
+        'Participated in Tech Fests',
+        'Academic Excellence in Computer Science'
       ],
       icon: Award,
       color: 'from-blue-500 to-cyan-600'
     },
     {
       id: 3,
-      degree: 'Professional Certificate in UI/UX Design',
-      institution: 'Digital Academy Online',
-      location: 'Remote',
-      year: '2022',
-      gpa: '100%',
-      description: 'Intensive bootcamp covering user research, wireframing, prototyping, and usability testing.',
+      degree: 'Responsive Web Design Certification',
+      institution: 'freeCodeCamp',
+      location: 'Online',
+      year: 'Jan 2024',
+      gpa: 'Certified',
+      description: 'Comprehensive course covering HTML5, CSS3, accessibility, and responsive design principles.',
       achievements: [
-        'Completed 6 real-world projects',
-        'Google UX Design Certification',
-        'Portfolio reviewed by industry experts',
-        'Job-ready skills certificate'
+        'Building Responsive Web Apps',
+        'Flexbox and Grid Mastery',
+        'Completed 5 certification projects',
+        'Accessibility Best Practices'
       ],
       icon: Bookmark,
       color: 'from-purple-500 to-indigo-600'
     },
     {
       id: 4,
-      degree: 'High School Diploma with Honors',
-      institution: 'Creative Arts High School',
-      location: 'Boston, MA',
-      year: '2014 - 2018',
-      gpa: '3.95/4.0',
-      description: 'Specialized arts program with focus on visual communications and digital design fundamentals.',
+      degree: 'Legacy JavaScript Algorithms and Data Structures',
+      institution: 'freeCodeCamp',
+      location: 'Online',
+      year: 'May 2024',
+      gpa: 'Certified',
+      description: 'In-depth study of JavaScript fundamentals, algorithms, and data structures.',
       achievements: [
-        'Valedictorian of graduating class',
-        'National Merit Scholar',
-        'Won state design competition',
-        'Early admission to top design programs'
+        'Regular Expressions',
+        'Debugging and Object Oriented Programming',
+        'Functional Programming',
+        'Algorithm Scripting'
       ],
       icon: FileText,
       color: 'from-orange-500 to-red-600'

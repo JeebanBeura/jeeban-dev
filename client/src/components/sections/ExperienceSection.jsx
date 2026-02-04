@@ -6,94 +6,65 @@ export default function ExperienceSection() {
   const experienceData = [
     {
       id: 1,
-      company: 'Creative Studio Co.',
-      position: 'Senior UI/UX Designer',
-      dateRange: '2023 - Present',
-      duration: '1+ year',
-      icon: Palette,
-      description: 'Leading design strategy and mentoring junior designers in creating innovative digital products.',
+      company: 'Web Bocket Software Pvt. Ltd',
+      position: 'Software Development Engineer',
+      dateRange: 'Oct 2025 – Present',
+      duration: 'Present',
+      icon: Code2,
+      description: 'Developing cross-platform applications and real-time communication features.',
       responsibilities: [
-        'Lead design projects from concept to launch',
-        'Mentor and guide a team of 5 designers',
-        'Define design systems and brand guidelines',
-        'Conduct user research and usability testing'
+        'Developing cross-platform job portal using React Native',
+        'Implementing real-time notifications with Socket.io',
+        'Job search, posting, and candidate management features',
+        'In-app messaging implementation'
       ],
       achievements: [
-        'Launched 3 major product updates',
-        'Increased user satisfaction by 40%',
-        'Built comprehensive design system',
-        'Won Best Design Award 2024'
+        'Cross-platform mobile application deployment',
+        'Real-time communication system integration'
       ],
-      skills: ['Leadership', 'Design Systems', 'User Research', 'Figma', 'Strategy'],
+      skills: ['React Native', 'Socket.io', 'Android', 'Mobile-First'],
       color: 'from-pink-500 to-rose-600'
     },
     {
       id: 2,
-      company: 'Digital Innovations Inc.',
-      position: 'Product Designer',
-      dateRange: '2021 - 2023',
-      duration: '2 years',
-      icon: Code2,
-      description: 'Designed user interfaces and experiences for mobile and web applications with focus on usability.',
+      company: 'Web Bocket Software Pvt. Ltd',
+      position: 'Software Developer Trainee',
+      dateRange: 'Apr 2025 – Sep 2025',
+      duration: '6 months',
+      icon: Briefcase,
+      description: 'Built admin panels and lead management systems.',
       responsibilities: [
-        'Design mobile and web interfaces',
-        'Create wireframes and prototypes',
-        'Collaborate with product and engineering teams',
-        'Implement feedback from user testing'
+        'Built role-based admin panel with React.js',
+        'Implemented lead management system',
+        'ERP system development collaboration',
+        'Code reviews and agile participation'
       ],
       achievements: [
-        'Designed 15+ features used by 100k+ users',
-        'Reduced design-to-development time by 30%',
-        'Created component library with 200+ components',
-        'Improved app rating from 3.8 to 4.7 stars'
+        'Role-based access control implementation',
+        'Sales pipeline tracking system'
       ],
-      skills: ['UI Design', 'Prototyping', 'Mobile Design', 'Figma', 'User Testing'],
+      skills: ['React.js', 'State Management', 'ERP', 'Agile'],
       color: 'from-blue-500 to-cyan-600'
     },
     {
       id: 3,
-      company: 'Tech Startup Hub',
-      position: 'Junior UI Designer',
-      dateRange: '2020 - 2021',
-      duration: '1 year',
-      icon: Zap,
-      description: 'Started my career designing user interfaces for startup projects in fast-paced environment.',
+      company: 'Web Bocket Software Pvt. Ltd',
+      position: 'Software Developer Intern',
+      dateRange: 'Sep 2024 – Mar 2025',
+      duration: '7 months',
+      icon: Palette,
+      description: 'Developed responsive platforms and API integrations.',
       responsibilities: [
-        'Design UI for web and mobile applications',
-        'Create design mockups and prototypes',
-        'Support senior designers on projects',
-        'Participate in design reviews'
+        'Travel booking platform UI with Tailwind CSS',
+        'RESTful API integrations for booking',
+        'Salon appointment system UI',
+        'Real estate listing platform'
       ],
       achievements: [
-        'Designed interfaces for 5 shipped products',
-        'Collaborated with 20+ startups',
-        'Built personal design portfolio',
-        'Received Rookie Designer Award'
+        'Responsive travel platform launch',
+        'Real-time package availability system'
       ],
-      skills: ['UI Design', 'Web Design', 'Adobe XD', 'Sketch', 'Teamwork'],
-      color: 'from-yellow-500 to-orange-600'
-    },
-    {
-      id: 4,
-      company: 'Design Agency Plus',
-      position: 'Design Intern',
-      dateRange: '2019 - 2020',
-      duration: '6 months',
-      icon: Target,
-      description: 'Gained foundational design experience working on client projects and learning industry best practices.',
-      responsibilities: [
-        'Assist on client design projects',
-        'Create social media graphics',
-        'Support brand design initiatives',
-        'Learn design tools and processes'
-      ],
-      achievements: [
-        'Worked on 10+ client projects',
-        'Created 50+ design assets',
-        'Earned full-time job offer',
-        'Mentored by award-winning designers'
-      ],
-      skills: ['Graphic Design', 'Branding', 'Adobe Creative Suite', 'Social Media Design'],
+      skills: ['CSS3', 'Tailwind CSS', 'RESTful APIs', 'UI Design'],
       color: 'from-purple-500 to-indigo-600'
     }
   ];
@@ -121,7 +92,7 @@ export default function ExperienceSection() {
         {/* Career Timeline */}
         <div className="p-8 rounded-2xl bg-[#2A0A3D]/40 backdrop-blur-md border border-[#B84FD6]/30">
           <h3 className="text-[#FFFFFF] font-bold text-2xl mb-8">Career Progression</h3>
-          
+
           <div className="space-y-6">
             {experienceData.map((exp, index) => (
               <div key={exp.id} className="relative">
@@ -144,7 +115,7 @@ export default function ExperienceSection() {
                   {/* Progress Bar */}
                   <div className="hidden md:block w-20">
                     <div className="h-1 bg-[#1A0626]/60 rounded-full overflow-hidden">
-                      <div 
+                      <div
                         className="h-full bg-gradient-to-r from-[#D06BE3] to-[#E08AF0]"
                         style={{ width: `${((experienceData.length - index) / experienceData.length) * 100}%` }}
                       ></div>
