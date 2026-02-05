@@ -30,34 +30,10 @@ export default function Footer() {
   };
 
   const socialLinks = [
-    {
-      icon: Facebook,
-      label: 'Facebook',
-      href: 'https://www.facebook.com/profile.php?id=61550493356002',
-      color: 'hover:text-[#1877F2] hover:border-[#1877F2]',
-      bg: 'hover:bg-[#1877F2]/10'
-    },
-    {
-      icon: Linkedin,
-      label: 'LinkedIn',
-      href: 'https://www.linkedin.com/in/jeeban-beura/',
-      color: 'hover:text-[#0A66C2] hover:border-[#0A66C2]',
-      bg: 'hover:bg-[#0A66C2]/10'
-    },
-    {
-      icon: Github,
-      label: 'GitHub',
-      href: 'https://github.com/jeebanbeura',
-      color: 'hover:text-white hover:border-white',
-      bg: 'hover:bg-white/10'
-    },
-    {
-      icon: Instagram,
-      label: 'Instagram',
-      href: 'https://www.instagram.com/_decoding__life_/',
-      color: 'hover:text-[#E1306C] hover:border-[#E1306C]',
-      bg: 'hover:bg-[#E1306C]/10'
-    }
+    { icon: Linkedin, label: 'LinkedIn', href: 'https://www.linkedin.com/in/jeeban-beura/', color: 'hover:text-blue-400' },
+    { icon: Github, label: 'GitHub', href: 'https://github.com/jeebanbeura', color: 'hover:text-gray-300' },
+    { icon: Instagram, label: 'Instagram', href: 'https://www.instagram.com/_decoding__life_', color: 'hover:text-pink-400' },
+    { icon: Mail, label: 'Email', href: 'mailto:jb.jeebanbeura@gmail.com', color: 'hover:text-red-400' }
   ];
 
   return (
@@ -192,7 +168,7 @@ export default function Footer() {
                         aria-label={social.label}
                         className={`group relative w-10 h-10 rounded-lg bg-[#2A0A3D]/40 border border-[#B84FD6]/30 flex items-center justify-center transition-all duration-300 ${social.color} ${social.bg}`}
                       >
-                        <Icon size={20} className="transition-transform duration-300 group-hover:scale-110" />
+                        <Icon size={20} className="transition-transform text-[#CFC7D8] duration-300 group-hover:scale-110" />
                       </a>
                     );
                   })}
