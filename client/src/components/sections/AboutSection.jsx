@@ -4,15 +4,15 @@ import aboutImage from '../../assets/jeeban2.jpeg';
 
 export default function AboutSection() {
   return (
-    <section id="about" className="relative bg-gradient-to-br from-[#1A0626] via-[#4B0F6B] to-[#8A2BAE] py-12 sm:py-16 md:py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
+    <section id="about" className="relative bg-gradient-to-br from-purple-50 via-white to-purple-50 dark:from-[#1A0626] dark:via-[#4B0F6B] dark:to-[#8A2BAE] py-12 sm:py-16 md:py-20 px-4 sm:px-6 lg:px-8 overflow-hidden transition-colors duration-300">
       {/* Background Elements */}
-      <div className="absolute top-0 right-0 w-48 sm:w-72 md:w-96 h-48 sm:h-72 md:h-96 bg-[#B84FD6] rounded-full opacity-10 blur-3xl"></div>
-      <div className="absolute bottom-0 left-0 w-40 sm:w-64 md:w-80 h-40 sm:h-64 md:h-80 bg-[#E08AF0] rounded-full opacity-10 blur-3xl"></div>
+      <div className="absolute top-0 right-0 w-48 sm:w-72 md:w-96 h-48 sm:h-72 md:h-96 bg-purple-300 dark:bg-[#B84FD6] rounded-full opacity-20 dark:opacity-10 blur-3xl"></div>
+      <div className="absolute bottom-0 left-0 w-40 sm:w-64 md:w-80 h-40 sm:h-64 md:h-80 bg-purple-300 dark:bg-[#E08AF0] rounded-full opacity-20 dark:opacity-10 blur-3xl"></div>
 
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Section Header */}
         <div className="text-center mb-12 sm:mb-14 md:mb-16">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-[#FFFFFF] mb-3 sm:mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-[#FFFFFF] mb-3 sm:mb-4">
             About <span className="bg-gradient-to-r from-[#D06BE3] to-[#E08AF0] bg-clip-text text-transparent">Me</span>
           </h2>
           <div className="w-16 sm:w-20 h-1 bg-gradient-to-r from-[#D06BE3] to-[#E08AF0] mx-auto rounded-full"></div>
@@ -64,11 +64,11 @@ export default function AboutSection() {
           <div className="space-y-4 sm:space-y-6">
             {/* Main Description */}
             <div>
-              <p className="text-[#CFC7D8] text-sm sm:text-base md:text-lg leading-relaxed mb-4 sm:mb-6">
+              <p className="text-gray-600 dark:text-[#CFC7D8] text-sm sm:text-base md:text-lg leading-relaxed mb-4 sm:mb-6">
                 Welcome to my portfolio! I'm Jeeban Beura, a passionate MERN Stack Developer with 1+ year of experience building responsive web and mobile applications. Proficient in React.js, React Native, Node.js, Express.js, and MongoDB.
               </p>
 
-              <p className="text-[#CFC7D8] text-sm sm:text-base md:text-lg leading-relaxed mb-4 sm:mb-6">
+              <p className="text-gray-600 dark:text-[#CFC7D8] text-sm sm:text-base md:text-lg leading-relaxed mb-4 sm:mb-6">
                 I specialize in RESTful API development, real-time communication with Socket.io, and cross-platform application development. I transform ideas into seamless functional solutions that meet business requirements.
               </p>
 
@@ -77,7 +77,7 @@ export default function AboutSection() {
                 href="https://www.linkedin.com/in/jeeban-beura/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center space-x-2 text-[#E08AF0] font-semibold hover:text-white transition-colors duration-300 text-sm sm:text-base"
+                className="inline-flex items-center space-x-2 text-purple-600 dark:text-[#E08AF0] font-semibold hover:text-purple-800 dark:hover:text-white transition-colors duration-300 text-sm sm:text-base"
               >
                 <span>View LinkedIn Profile</span>
                 <span className="text-lg sm:text-xl">→</span>
@@ -85,14 +85,14 @@ export default function AboutSection() {
             </div>
 
             {/* Highlight Box */}
-            <div className="p-4 sm:p-6 rounded-2xl bg-[#2A0A3D]/60 backdrop-blur-md border border-[#B84FD6]/30 hover:border-[#B84FD6]/60 hover:bg-[#2A0A3D]/80 transition-all duration-300 hover:shadow-lg hover:shadow-[#B84FD6]/20">
+            <div className="p-4 sm:p-6 rounded-2xl bg-white/80 dark:bg-[#2A0A3D]/60 backdrop-blur-md border border-purple-200 dark:border-[#B84FD6]/30 hover:border-purple-400 dark:hover:border-[#B84FD6]/60 hover:bg-white dark:hover:bg-[#2A0A3D]/80 transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/20 dark:hover:shadow-[#B84FD6]/20">
               <div className="flex items-start space-x-3 sm:space-x-4">
                 <div className="p-2 sm:p-3 rounded-lg bg-gradient-to-br from-[#D06BE3]/30 to-[#E08AF0]/20 flex-shrink-0">
                   <Sparkles size={20} className="text-[#E08AF0] sm:block hidden" />
                   <Sparkles size={18} className="text-[#E08AF0] sm:hidden block" />
                 </div>
                 <div>
-                  <p className="text-[#CFC7D8] text-sm sm:text-base leading-relaxed">
+                  <p className="text-gray-600 dark:text-[#CFC7D8] text-sm sm:text-base leading-relaxed">
                     I am deeply committed to my work, investing creativity and precision into every project to ensure a unique and effective user experience.
                   </p>
                 </div>
@@ -103,7 +103,7 @@ export default function AboutSection() {
       </div>
 
       {/* Bottom Gradient */}
-      <div className="absolute inset-x-0 bottom-0 h-20 sm:h-24 md:h-32 bg-gradient-to-t from-[#1A0626] to-transparent pointer-events-none"></div>
+      <div className="absolute inset-x-0 bottom-0 h-20 sm:h-24 md:h-32 bg-gradient-to-t from-purple-50 dark:from-[#1A0626] to-transparent pointer-events-none"></div>
     </section>
   );
 }

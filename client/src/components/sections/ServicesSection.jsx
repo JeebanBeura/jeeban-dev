@@ -54,18 +54,18 @@ export default function ServicesSection() {
     ];
 
     return (
-        <section id="services" className="relative bg-gradient-to-br from-[#1A0626] via-[#4B0F6B] to-[#8A2BAE] py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
+        <section id="services" className="relative bg-gradient-to-br from-purple-50 via-white to-purple-50 dark:from-[#1A0626] dark:via-[#4B0F6B] dark:to-[#8A2BAE] py-20 px-4 sm:px-6 lg:px-8 overflow-hidden transition-colors duration-300">
             {/* Background Elements */}
-            <div className="absolute top-0 left-0 w-96 h-96 bg-[#B84FD6] rounded-full opacity-10 blur-3xl"></div>
-            <div className="absolute bottom-0 right-0 w-80 h-80 bg-[#E08AF0] rounded-full opacity-10 blur-3xl"></div>
+            <div className="absolute top-0 left-0 w-96 h-96 bg-purple-300 dark:bg-[#B84FD6] rounded-full opacity-20 dark:opacity-10 blur-3xl"></div>
+            <div className="absolute bottom-0 right-0 w-80 h-80 bg-purple-300 dark:bg-[#E08AF0] rounded-full opacity-20 dark:opacity-10 blur-3xl"></div>
 
             <div className="max-w-7xl mx-auto relative z-10">
                 {/* Section Header */}
                 <div className="text-center mb-16">
-                    <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#FFFFFF] mb-4">
+                    <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-[#FFFFFF] mb-4">
                         My <span className="bg-gradient-to-r from-[#D06BE3] to-[#E08AF0] bg-clip-text text-transparent">Services</span>
                     </h2>
-                    <p className="text-[#CFC7D8] max-w-2xl mx-auto text-lg">
+                    <p className="text-gray-600 dark:text-[#CFC7D8] max-w-2xl mx-auto text-lg">
                         Delivering high-quality digital solutions tailored to your business needs
                     </p>
                     <div className="w-20 h-1 bg-gradient-to-r from-[#D06BE3] to-[#E08AF0] mx-auto rounded-full mt-6"></div>
@@ -78,23 +78,23 @@ export default function ServicesSection() {
                         return (
                             <div
                                 key={service.id}
-                                className="group relative p-8 rounded-2xl bg-[#2A0A3D]/40 backdrop-blur-md border border-[#B84FD6]/30 hover:border-[#B84FD6]/60 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-[#B84FD6]/20"
+                                className="group relative p-8 rounded-2xl bg-white dark:bg-[#2A0A3D]/40 backdrop-blur-md border border-gray-200 dark:border-[#B84FD6]/30 hover:border-purple-400 dark:hover:border-[#B84FD6]/60 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-purple-500/20 dark:hover:shadow-[#B84FD6]/20"
                             >
                                 {/* Hover Gradient Background */}
                                 <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-[#D06BE3]/5 to-[#E08AF0]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
 
                                 {/* Icon */}
                                 <div className={`w-14 h-14 rounded-xl bg-gradient-to-br ${service.gradient} p-0.5 mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                                    <div className="w-full h-full bg-[#1A0626] rounded-xl flex items-center justify-center">
+                                    <div className="w-full h-full bg-gray-50 dark:bg-[#1A0626] rounded-xl flex items-center justify-center">
                                         <Icon size={28} className={service.color} />
                                     </div>
                                 </div>
 
                                 {/* Content */}
-                                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-[#E08AF0] transition-colors">
+                                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3 group-hover:text-purple-600 dark:group-hover:text-[#E08AF0] transition-colors">
                                     {service.title}
                                 </h3>
-                                <p className="text-[#CFC7D8] leading-relaxed">
+                                <p className="text-gray-600 dark:text-[#CFC7D8] leading-relaxed">
                                     {service.description}
                                 </p>
 

@@ -35,19 +35,19 @@ export default function ProjectsSection() {
   ];
 
   return (
-    <section id="work" className="relative bg-gradient-to-br from-[#1A0626] via-[#4B0F6B] to-[#8A2BAE] py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
+    <section id="work" className="relative bg-gradient-to-br from-purple-50 via-white to-purple-50 dark:from-[#1A0626] dark:via-[#4B0F6B] dark:to-[#8A2BAE] py-20 px-4 sm:px-6 lg:px-8 overflow-hidden transition-colors duration-300">
       {/* Background Elements */}
-      <div className="absolute top-0 right-0 w-96 h-96 bg-[#B84FD6] rounded-full opacity-10 blur-3xl"></div>
-      <div className="absolute bottom-0 left-0 w-80 h-80 bg-[#E08AF0] rounded-full opacity-10 blur-3xl"></div>
+      <div className="absolute top-0 right-0 w-96 h-96 bg-purple-300 dark:bg-[#B84FD6] rounded-full opacity-20 dark:opacity-10 blur-3xl"></div>
+      <div className="absolute bottom-0 left-0 w-80 h-80 bg-purple-300 dark:bg-[#E08AF0] rounded-full opacity-20 dark:opacity-10 blur-3xl"></div>
 
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#FFFFFF] mb-4">
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-[#FFFFFF] mb-4">
             My <span className="bg-gradient-to-r from-[#D06BE3] to-[#E08AF0] bg-clip-text text-transparent">Projects</span>
           </h2>
           <div className="w-20 h-1 bg-gradient-to-r from-[#D06BE3] to-[#E08AF0] mx-auto rounded-full"></div>
-          <p className="text-[#CFC7D8] mt-6 text-lg max-w-2xl mx-auto">
+          <p className="text-gray-600 dark:text-[#CFC7D8] mt-6 text-lg max-w-2xl mx-auto">
             Discover the projects that showcase my passion for design and innovation
           </p>
         </div>
@@ -62,7 +62,7 @@ export default function ProjectsSection() {
               onMouseLeave={() => setHoveredProject(null)}
             >
               {/* Card Container */}
-              <div className="h-full rounded-2xl overflow-hidden bg-[#2A0A3D]/60 backdrop-blur-md border border-[#8A2BAE]/40 hover:border-[#B84FD6]/80 transition-all duration-300 hover:shadow-2xl hover:shadow-[#B84FD6]/50 hover:-translate-y-2">
+              <div className="h-full rounded-2xl overflow-hidden bg-white dark:bg-[#2A0A3D]/60 backdrop-blur-md border border-purple-200 dark:border-[#8A2BAE]/40 hover:border-purple-400 dark:hover:border-[#B84FD6]/80 transition-all duration-300 hover:shadow-2xl hover:shadow-purple-500/20 dark:hover:shadow-[#B84FD6]/50 hover:-translate-y-2">
 
                 {/* Image Container */}
                 <div className="relative h-64 overflow-hidden bg-gradient-to-br from-[#1A0626] to-[#2A0A3D]">
@@ -105,12 +105,12 @@ export default function ProjectsSection() {
                 {/* Content Container */}
                 <div className="p-6 space-y-4">
                   {/* Title */}
-                  <h3 className="text-[#FFFFFF] font-bold text-2xl group-hover:text-[#E08AF0] transition-colors duration-300">
+                  <h3 className="text-gray-900 dark:text-[#FFFFFF] font-bold text-2xl group-hover:text-purple-600 dark:group-hover:text-[#E08AF0] transition-colors duration-300">
                     {project.title}
                   </h3>
 
                   {/* Description */}
-                  <p className="text-[#CFC7D8] text-sm leading-relaxed line-clamp-2">
+                  <p className="text-gray-600 dark:text-[#CFC7D8] text-sm leading-relaxed line-clamp-2">
                     {project.description}
                   </p>
 
@@ -119,7 +119,7 @@ export default function ProjectsSection() {
                     {project.tags.map((tag, index) => (
                       <span
                         key={index}
-                        className="px-3 py-1 rounded-full text-xs font-medium bg-[#B84FD6]/20 border border-[#B84FD6]/40 text-[#CFC7D8] group-hover:border-[#B84FD6]/70 group-hover:bg-[#B84FD6]/40 group-hover:text-[#FFFFFF] transition-all duration-300"
+                        className="px-3 py-1 rounded-full text-xs font-medium bg-purple-100 dark:bg-[#B84FD6]/20 border border-purple-200 dark:border-[#B84FD6]/40 text-gray-700 dark:text-[#CFC7D8] group-hover:border-purple-400 dark:group-hover:border-[#B84FD6]/70 group-hover:bg-purple-200 dark:group-hover:bg-[#B84FD6]/40 group-hover:text-purple-900 dark:group-hover:text-[#FFFFFF] transition-all duration-300"
                       >
                         {tag}
                       </span>
@@ -130,7 +130,7 @@ export default function ProjectsSection() {
                   <div className="pt-4">
                     <a
                       href="#"
-                      className="inline-flex items-center space-x-2 text-[#E08AF0] font-semibold group/link hover:text-white transition-colors duration-300"
+                      className="inline-flex items-center space-x-2 text-purple-600 dark:text-[#E08AF0] font-semibold group/link hover:text-purple-800 dark:hover:text-white transition-colors duration-300"
                     >
                       <span>View Project</span>
                       <ArrowRight size={16} className="group-hover/link:translate-x-2 transition-transform duration-300" />
@@ -147,7 +147,7 @@ export default function ProjectsSection() {
       </div>
 
       {/* Bottom Gradient */}
-      <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-[#1A0626] to-transparent pointer-events-none"></div>
+      <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-purple-50 dark:from-[#1A0626] to-transparent pointer-events-none"></div>
     </section>
   );
 }

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
+import ThemeToggle from '../ThemeToggle';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -47,7 +48,7 @@ export default function Navbar() {
       {/* Navbar */}
       <nav className="fixed top-0 w-full z-50">
         {/* Glassmorphism Background */}
-        <div className="absolute inset-0 bg-[#2A0A3D]/40 backdrop-blur-xl border-b border-white/10 shadow-xl"></div>
+        <div className="absolute inset-0 bg-white/80 dark:bg-[#2A0A3D]/40 backdrop-blur-xl border-b border-gray-200 dark:border-white/10 shadow-xl transition-colors duration-300"></div>
 
         {/* Content */}
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -73,8 +74,8 @@ export default function Navbar() {
                   href={item.href}
                   onClick={() => handleLinkClick(item.id)}
                   className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 relative group ${activeLink === item.id
-                    ? 'text-[#E08AF0] bg-white/5'
-                    : 'text-[#FFFFFF]/80 hover:text-[#FFFFFF]'
+                    ? 'text-purple-600 bg-purple-50 dark:text-[#E08AF0] dark:bg-white/5'
+                    : 'text-gray-600 hover:text-gray-900 dark:text-[#FFFFFF]/80 dark:hover:text-[#FFFFFF]'
                     }`}
                 >
                   <span className="relative z-10">{item.name}</span>
@@ -91,7 +92,8 @@ export default function Navbar() {
             </div>
 
             {/* Contact Button - Desktop */}
-            <div className="hidden lg:block">
+            <div className="hidden lg:flex items-center space-x-4">
+              <ThemeToggle />
               <a
                 href="#contact"
                 className="relative group px-8 py-2.5 rounded-full font-semibold overflow-hidden block"
@@ -120,9 +122,11 @@ export default function Navbar() {
                 <span className="relative text-white">Contact</span>
               </a>
 
+              <ThemeToggle />
+
               <button
                 onClick={() => setIsOpen(!isOpen)}
-                className="p-2 rounded-lg text-[#FFFFFF]/80 hover:text-[#FFFFFF] hover:bg-white/10 transition-all duration-300"
+                className="p-2 rounded-lg text-gray-600 hover:text-gray-900 hover:bg-gray-100 dark:text-[#FFFFFF]/80 dark:hover:text-[#FFFFFF] dark:hover:bg-white/10 transition-all duration-300"
               >
                 {isOpen ? <X size={24} /> : <Menu size={24} />}
               </button>
@@ -138,8 +142,8 @@ export default function Navbar() {
                   href={item.href}
                   onClick={() => handleLinkClick(item.id)}
                   className={`block px-4 py-3 rounded-lg font-medium transition-all duration-300 ${activeLink === item.id
-                    ? 'text-[#E08AF0] bg-gradient-to-r from-[#D06BE3]/20 to-[#E08AF0]/20'
-                    : 'text-[#FFFFFF]/80 hover:text-[#FFFFFF] hover:bg-white/5'
+                    ? 'text-purple-600 bg-purple-50 dark:text-[#E08AF0] dark:bg-gradient-to-r dark:from-[#D06BE3]/20 dark:to-[#E08AF0]/20'
+                    : 'text-gray-600 hover:text-gray-900 hover:bg-gray-100 dark:text-[#FFFFFF]/80 dark:hover:text-[#FFFFFF] dark:hover:bg-white/5'
                     }`}
                 >
                   {item.name}

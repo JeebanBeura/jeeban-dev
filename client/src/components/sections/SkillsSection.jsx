@@ -72,19 +72,19 @@ export default function SkillsSection() {
   const extendedSkills = [...skills, ...skills];
 
   return (
-    <section id="skills" className="relative bg-gradient-to-br from-[#1A0626] via-[#4B0F6B] to-[#8A2BAE] py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
+    <section id="skills" className="relative bg-gradient-to-br from-purple-50 via-white to-purple-50 dark:from-[#1A0626] dark:via-[#4B0F6B] dark:to-[#8A2BAE] py-20 px-4 sm:px-6 lg:px-8 overflow-hidden transition-colors duration-300">
       {/* Background Elements */}
-      <div className="absolute top-0 right-0 w-96 h-96 bg-[#B84FD6] rounded-full opacity-10 blur-3xl"></div>
-      <div className="absolute bottom-0 left-0 w-80 h-80 bg-[#E08AF0] rounded-full opacity-10 blur-3xl"></div>
+      <div className="absolute top-0 right-0 w-96 h-96 bg-purple-300 dark:bg-[#B84FD6] rounded-full opacity-20 dark:opacity-10 blur-3xl"></div>
+      <div className="absolute bottom-0 left-0 w-80 h-80 bg-purple-300 dark:bg-[#E08AF0] rounded-full opacity-20 dark:opacity-10 blur-3xl"></div>
 
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#FFFFFF] mb-4">
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-[#FFFFFF] mb-4">
             My <span className="bg-gradient-to-r from-[#D06BE3] to-[#E08AF0] bg-clip-text text-transparent">Skills</span>
           </h2>
           <div className="w-20 h-1 bg-gradient-to-r from-[#D06BE3] to-[#E08AF0] mx-auto rounded-full"></div>
-          <p className="text-[#CFC7D8] mt-6 text-lg max-w-2xl mx-auto">
+          <p className="text-gray-600 dark:text-[#CFC7D8] mt-6 text-lg max-w-2xl mx-auto">
             Technologies and expertise I use to create amazing design experiences
           </p>
         </div>
@@ -96,8 +96,8 @@ export default function SkillsSection() {
           onMouseLeave={() => setIsHovered(false)}
         >
           {/* Gradient Fade Effects */}
-          <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-[#1A0626] via-[#1A0626]/50 to-transparent z-10 pointer-events-none"></div>
-          <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-[#1A0626] via-[#1A0626]/50 to-transparent z-10 pointer-events-none"></div>
+          <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-purple-50 via-purple-50/50 dark:from-[#1A0626] dark:via-[#1A0626]/50 to-transparent z-10 pointer-events-none"></div>
+          <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-purple-50 via-purple-50/50 dark:from-[#1A0626] dark:via-[#1A0626]/50 to-transparent z-10 pointer-events-none"></div>
 
           {/* Scrolling Container */}
           <div
@@ -114,7 +114,7 @@ export default function SkillsSection() {
                   className="group relative flex-shrink-0 w-72 h-24"
                 >
                   {/* Skill Card */}
-                  <div className="h-full p-6 rounded-2xl bg-[#2A0A3D]/60 backdrop-blur-xl border border-[#B84FD6]/40 hover:border-[#B84FD6]/80 transition-all duration-300 hover:shadow-lg hover:shadow-[#B84FD6]/40 flex items-center space-x-6 cursor-default">
+                  <div className="h-full p-6 rounded-2xl bg-white dark:bg-[#2A0A3D]/60 backdrop-blur-xl border border-gray-200 dark:border-[#B84FD6]/40 hover:border-purple-400 dark:hover:border-[#B84FD6]/80 transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/20 dark:hover:shadow-[#B84FD6]/40 flex items-center space-x-6 cursor-default">
 
                     {/* Icon Container */}
                     <div className="flex-shrink-0">
@@ -125,7 +125,7 @@ export default function SkillsSection() {
 
                     {/* Text Content */}
                     <div className="flex-1 min-w-0">
-                      <h3 className="text-[#FFFFFF] font-bold text-lg truncate group-hover:text-[#E08AF0] transition-colors duration-300">
+                      <h3 className="text-gray-900 dark:text-[#FFFFFF] font-bold text-lg truncate group-hover:text-purple-600 dark:group-hover:text-[#E08AF0] transition-colors duration-300">
                         {skill.name}
                       </h3>
                       <div className="w-0 h-0.5 bg-gradient-to-r from-[#D06BE3] to-[#E08AF0] group-hover:w-full transition-all duration-300 mt-2 rounded-full"></div>
@@ -158,7 +158,7 @@ export default function SkillsSection() {
 
         {/* Info Text */}
         <div className="text-center mt-12">
-          <p className="text-[#CFC7D8] text-sm flex items-center justify-center space-x-2">
+          <p className="text-gray-500 dark:text-[#CFC7D8] text-sm flex items-center justify-center space-x-2">
             <span className="inline-block w-2 h-2 rounded-full bg-gradient-to-r from-[#D06BE3] to-[#E08AF0] animate-pulse"></span>
             <span>Hover to pause • Scroll continuously</span>
             <span className="inline-block w-2 h-2 rounded-full bg-gradient-to-r from-[#E08AF0] to-[#D06BE3] animate-pulse"></span>
@@ -167,7 +167,7 @@ export default function SkillsSection() {
       </div>
 
       {/* Bottom Gradient */}
-      <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-[#1A0626] to-transparent pointer-events-none"></div>
+      <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-purple-50 dark:from-[#1A0626] to-transparent pointer-events-none"></div>
     </section>
   );
 }

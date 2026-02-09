@@ -37,10 +37,10 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="relative bg-gradient-to-b from-[#1A0626] via-[#2A0A3D] to-[#1A0626] border-t border-[#B84FD6]/30 overflow-hidden">
+    <footer className="relative bg-gradient-to-b from-gray-100 via-white to-gray-100 dark:from-[#1A0626] dark:via-[#2A0A3D] dark:to-[#1A0626] border-t border-purple-200 dark:border-[#B84FD6]/30 overflow-hidden transition-colors duration-300">
       {/* Background Elements */}
-      <div className="absolute top-0 right-0 w-96 h-96 bg-[#B84FD6] rounded-full opacity-5 blur-3xl pointer-events-none"></div>
-      <div className="absolute bottom-0 left-0 w-80 h-80 bg-[#E08AF0] rounded-full opacity-5 blur-3xl pointer-events-none"></div>
+      <div className="absolute top-0 right-0 w-96 h-96 bg-purple-300 dark:bg-[#B84FD6] rounded-full opacity-20 dark:opacity-5 blur-3xl pointer-events-none"></div>
+      <div className="absolute bottom-0 left-0 w-80 h-80 bg-purple-300 dark:bg-[#E08AF0] rounded-full opacity-20 dark:opacity-5 blur-3xl pointer-events-none"></div>
 
       <div className="relative z-10">
         {/* Main Footer Content */}
@@ -53,24 +53,24 @@ export default function Footer() {
                 <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#D06BE3] to-[#E08AF0] flex items-center justify-center shadow-lg shadow-[#D06BE3]/20">
                   <Code2 size={24} className="text-white" />
                 </div>
-                <h3 className="text-2xl font-bold text-white tracking-tight">Jeeban</h3>
+                <h3 className="text-2xl font-bold text-gray-900 dark:text-white tracking-tight">Jeeban</h3>
               </div>
-              <p className="text-[#CFC7D8] text-sm leading-relaxed max-w-sm">
+              <p className="text-gray-600 dark:text-[#CFC7D8] text-sm leading-relaxed max-w-sm">
                 Creating beautiful digital experiences with modern design practices and cutting-edge technology.
               </p>
 
               {/* Contact Info */}
               <div className="space-y-4 pt-2">
-                <a href="mailto:jb.jeebanbeura@gmail.com" className="flex items-center space-x-3 text-[#CFC7D8] hover:text-[#E08AF0] transition group w-fit">
-                  <Mail size={18} className="text-[#B84FD6] group-hover:scale-110 transition-transform" />
+                <a href="mailto:jb.jeebanbeura@gmail.com" className="flex items-center space-x-3 text-gray-600 dark:text-[#CFC7D8] hover:text-purple-600 dark:hover:text-[#E08AF0] transition group w-fit">
+                  <Mail size={18} className="text-purple-500 dark:text-[#B84FD6] group-hover:scale-110 transition-transform" />
                   <span className="text-sm">jb.jeebanbeura@gmail.com</span>
                 </a>
-                <a href="tel:+917735572179" className="flex items-center space-x-3 text-[#CFC7D8] hover:text-[#E08AF0] transition group w-fit">
-                  <Phone size={18} className="text-[#B84FD6] group-hover:scale-110 transition-transform" />
+                <a href="tel:+917735572179" className="flex items-center space-x-3 text-gray-600 dark:text-[#CFC7D8] hover:text-purple-600 dark:hover:text-[#E08AF0] transition group w-fit">
+                  <Phone size={18} className="text-purple-500 dark:text-[#B84FD6] group-hover:scale-110 transition-transform" />
                   <span className="text-sm">+91 7735572179</span>
                 </a>
-                <div className="flex items-center space-x-3 text-[#CFC7D8] w-fit">
-                  <MapPin size={18} className="text-[#B84FD6]" />
+                <div className="flex items-center space-x-3 text-gray-600 dark:text-[#CFC7D8] w-fit">
+                  <MapPin size={18} className="text-purple-500 dark:text-[#B84FD6]" />
                   <span className="text-sm">Bhubaneswar, Odisha, India</span>
                 </div>
               </div>
@@ -78,7 +78,7 @@ export default function Footer() {
 
             {/* Quick Links */}
             <div className="text-left">
-              <h4 className="text-[#E08AF0] font-bold text-sm uppercase tracking-wider mb-6">Navigation</h4>
+              <h4 className="text-purple-600 dark:text-[#E08AF0] font-bold text-sm uppercase tracking-wider mb-6">Navigation</h4>
               <ul className="space-y-3">
                 {[
                   { label: 'Home', href: '#home' },
@@ -90,9 +90,9 @@ export default function Footer() {
                   <li key={link.label}>
                     <a
                       href={link.href}
-                      className="text-[#CFC7D8] hover:text-[#E08AF0] transition-all text-sm flex items-center space-x-2 group w-fit"
+                      className="text-gray-600 dark:text-[#CFC7D8] hover:text-purple-600 dark:hover:text-[#E08AF0] transition-all text-sm flex items-center space-x-2 group w-fit"
                     >
-                      <span className="w-0 group-hover:w-2 h-0.5 bg-[#E08AF0] transition-all duration-300"></span>
+                      <span className="w-0 group-hover:w-2 h-0.5 bg-purple-600 dark:bg-[#E08AF0] transition-all duration-300"></span>
                       <span className="group-hover:translate-x-1 transition-transform duration-300">{link.label}</span>
                     </a>
                   </li>
@@ -102,7 +102,7 @@ export default function Footer() {
 
             {/* Services */}
             <div className="text-left">
-              <h4 className="text-[#E08AF0] font-bold text-sm uppercase tracking-wider mb-6">Services</h4>
+              <h4 className="text-purple-600 dark:text-[#E08AF0] font-bold text-sm uppercase tracking-wider mb-6">Services</h4>
               <ul className="space-y-3">
                 {[
                   'Website Development',
@@ -115,9 +115,9 @@ export default function Footer() {
                   <li key={service}>
                     <a
                       href="#services"
-                      className="text-[#CFC7D8] hover:text-[#E08AF0] transition-all text-sm flex items-center space-x-2 group w-fit"
+                      className="text-gray-600 dark:text-[#CFC7D8] hover:text-purple-600 dark:hover:text-[#E08AF0] transition-all text-sm flex items-center space-x-2 group w-fit"
                     >
-                      <span className="w-0 group-hover:w-2 h-0.5 bg-[#E08AF0] transition-all duration-300"></span>
+                      <span className="w-0 group-hover:w-2 h-0.5 bg-purple-600 dark:bg-[#E08AF0] transition-all duration-300"></span>
                       <span className="group-hover:translate-x-1 transition-transform duration-300">{service}</span>
                     </a>
                   </li>
@@ -127,8 +127,8 @@ export default function Footer() {
 
             {/* Newsletter & Socials */}
             <div className="text-left">
-              <h4 className="text-[#E08AF0] font-bold text-sm uppercase tracking-wider mb-6">Newsletter</h4>
-              <p className="text-[#CFC7D8] text-sm mb-4">Subscribe to receive updates and news.</p>
+              <h4 className="text-purple-600 dark:text-[#E08AF0] font-bold text-sm uppercase tracking-wider mb-6">Newsletter</h4>
+              <p className="text-gray-600 dark:text-[#CFC7D8] text-sm mb-4">Subscribe to receive updates and news.</p>
 
               <form onSubmit={handleSubscribe} className="space-y-3 max-w-sm mb-8">
                 <div className="relative group">
@@ -137,7 +137,7 @@ export default function Footer() {
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     placeholder="Enter your email"
-                    className="w-full px-4 py-3 rounded-xl bg-[#2A0A3D]/40 border border-[#B84FD6]/30 focus:border-[#B84FD6] focus:bg-[#2A0A3D]/60 text-white placeholder-gray-400 text-sm focus:outline-none focus:ring-1 focus:ring-[#B84FD6]/50 transition-all duration-300"
+                    className="w-full px-4 py-3 rounded-xl bg-white border border-gray-300 dark:bg-[#2A0A3D]/40 dark:border-[#B84FD6]/30 focus:border-purple-500 dark:focus:border-[#B84FD6] focus:bg-gray-50 dark:focus:bg-[#2A0A3D]/60 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 text-sm focus:outline-none focus:ring-1 focus:ring-purple-500/50 dark:focus:ring-[#B84FD6]/50 transition-all duration-300"
                   />
                   <button
                     type="submit"
@@ -155,7 +155,7 @@ export default function Footer() {
               </form>
 
               <div>
-                <p className="text-[#CFC7D8] text-sm mb-3">Follow me</p>
+                <p className="text-gray-600 dark:text-[#CFC7D8] text-sm mb-3">Follow me</p>
                 <div className="flex gap-3">
                   {socialLinks.map((social) => {
                     const Icon = social.icon;
@@ -166,9 +166,9 @@ export default function Footer() {
                         target={social.href.startsWith('http') ? '_blank' : undefined}
                         rel={social.href.startsWith('http') ? 'noopener noreferrer' : undefined}
                         aria-label={social.label}
-                        className={`group relative w-10 h-10 rounded-lg bg-[#2A0A3D]/40 border border-[#B84FD6]/30 flex items-center justify-center transition-all duration-300 ${social.color} ${social.bg}`}
+                        className={`group relative w-10 h-10 rounded-lg bg-white border border-gray-300 dark:bg-[#2A0A3D]/40 dark:border-[#B84FD6]/30 flex items-center justify-center transition-all duration-300 ${social.color} ${social.bg}`}
                       >
-                        <Icon size={20} className="transition-transform text-[#CFC7D8] duration-300 group-hover:scale-110" />
+                        <Icon size={20} className="transition-transform text-gray-500 dark:text-[#CFC7D8] duration-300 group-hover:scale-110" />
                       </a>
                     );
                   })}
@@ -179,11 +179,11 @@ export default function Footer() {
           </div>
 
           {/* Divider & Copyright */}
-          <div className="border-t border-[#B84FD6]/20 pt-8 mt-8">
+          <div className="border-t border-purple-200 dark:border-[#B84FD6]/20 pt-8 mt-8">
             <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
-              <div className="text-[#9C8FB1] text-sm flex flex-col sm:flex-row items-start sm:items-center gap-2">
+              <div className="text-gray-500 dark:text-[#9C8FB1] text-sm flex flex-col sm:flex-row items-start sm:items-center gap-2">
                 <span>© {new Date().getFullYear()} Jeeban Beura. All rights reserved.</span>
-                <span className="hidden sm:inline text-[#B84FD6]/40">•</span>
+                <span className="hidden sm:inline text-purple-300 dark:text-[#B84FD6]/40">•</span>
                 <span className="flex items-center gap-1.5">
                   <span>Made with</span>
                   <Heart size={14} className="text-[#E08AF0] fill-[#E08AF0] animate-pulse" />
@@ -192,7 +192,7 @@ export default function Footer() {
                     href="https://www.linkedin.com/in/jeeban-beura/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-[#E08AF0] hover:text-white font-medium transition-colors"
+                    className="text-purple-600 dark:text-[#E08AF0] hover:text-purple-800 dark:hover:text-white font-medium transition-colors"
                   >
                     Jeeban
                   </a>
@@ -202,10 +202,10 @@ export default function Footer() {
               {/* Scroll to Top Button */}
               <button
                 onClick={scrollToTop}
-                className="group flex items-center gap-2 text-[#9C8FB1] hover:text-[#E08AF0] transition-colors py-2 px-4 rounded-lg hover:bg-[#2A0A3D]/40 self-start md:self-auto"
+                className="group flex items-center gap-2 text-gray-500 dark:text-[#9C8FB1] hover:text-purple-600 dark:hover:text-[#E08AF0] transition-colors py-2 px-4 rounded-lg hover:bg-purple-100 dark:hover:bg-[#2A0A3D]/40 self-start md:self-auto"
               >
                 <span className="text-sm font-medium">Back to top</span>
-                <div className="p-1.5 rounded-md bg-[#B84FD6]/10 group-hover:bg-[#B84FD6]/20 transition-colors border border-[#B84FD6]/20 group-hover:border-[#B84FD6]/40">
+                <div className="p-1.5 rounded-md bg-purple-100/50 dark:bg-[#B84FD6]/10 group-hover:bg-purple-200 dark:group-hover:bg-[#B84FD6]/20 transition-colors border border-purple-200 dark:border-[#B84FD6]/20 group-hover:border-purple-300 dark:group-hover:border-[#B84FD6]/40">
                   <ArrowUp size={14} className="group-hover:-translate-y-0.5 transition-transform" />
                 </div>
               </button>
@@ -214,7 +214,7 @@ export default function Footer() {
         </div>
 
         {/* Bottom Gradient Line */}
-        <div className="absolute bottom-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-[#B84FD6]/50 to-transparent"></div>
+        <div className="absolute bottom-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-purple-300 dark:via-[#B84FD6]/50 to-transparent"></div>
       </div>
     </footer>
   );

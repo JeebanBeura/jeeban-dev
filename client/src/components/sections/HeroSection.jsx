@@ -14,7 +14,7 @@ import {
 import heroImage from '../../assets/jeeban1.png';
 export default function HeroSection() {
   return (
-    <section id='home' className="relative min-h-screen bg-gradient-to-br from-[#1A0626] via-[#4B0F6B] to-[#8A2BAE] pt-24 pb-16 sm:pt-32 sm:pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
+    <section id='home' className="relative min-h-screen bg-gradient-to-br from-purple-50 via-white to-purple-100 dark:from-[#1A0626] dark:via-[#4B0F6B] dark:to-[#8A2BAE] pt-24 pb-16 sm:pt-32 sm:pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden transition-colors duration-300">
       {/* Animated Background Elements */}
       <div className="absolute top-20 right-10 w-64 h-64 sm:w-96 sm:h-96 bg-[#B84FD6] rounded-full opacity-10 blur-3xl"></div>
       <div className="absolute bottom-20 left-10 w-48 h-48 sm:w-80 sm:h-80 bg-[#E08AF0] rounded-full opacity-10 blur-3xl"></div>
@@ -26,7 +26,7 @@ export default function HeroSection() {
           <div className="space-y-6 sm:space-y-8 order-2 lg:order-1 text-center lg:text-left">
             {/* Welcome Text */}
             <div className="space-y-2 flex justify-center lg:justify-start">
-              <p className="text-[#CFC7D8] text-xs sm:text-sm font-medium uppercase tracking-widest flex items-center space-x-2">
+              <p className="text-gray-500 dark:text-[#CFC7D8] text-xs sm:text-sm font-medium uppercase tracking-widest flex items-center space-x-2">
                 <Sparkles size={16} className="text-[#D06BE3] animate-pulse" />
                 <span>WELCOME TO MY WORLD</span>
               </p>
@@ -35,7 +35,7 @@ export default function HeroSection() {
             {/* Main Heading */}
             <div className="space-y-3">
               <div className="flex flex-col sm:flex-row items-center lg:items-baseline justify-center lg:justify-start space-y-2 sm:space-y-0 sm:space-x-3">
-                <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold text-[#FFFFFF] leading-tight">
+                <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold text-gray-900 dark:text-[#FFFFFF] leading-tight">
                   Hi, I'm
                 </h1>
                 <span className="text-4xl sm:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-[#D06BE3] to-[#E08AF0] bg-clip-text text-transparent">
@@ -47,22 +47,22 @@ export default function HeroSection() {
             {/* Job Title */}
             <div className="space-y-2">
               <h2 className="text-2xl sm:text-3xl lg:text-5xl font-bold">
-                <span className="text-[#D06BE3]">Software</span> <span className="text-[#FFFFFF]">Developer</span>
+                <span className="text-purple-600 dark:text-[#D06BE3]">Software</span> <span className="text-gray-900 dark:text-[#FFFFFF]">Developer</span>
               </h2>
             </div>
 
             {/* Description */}
-            <p className="text-[#CFC7D8] text-sm sm:text-base sm:text-lg leading-relaxed max-w-lg mx-auto lg:mx-0">
+            <p className="text-gray-600 dark:text-[#CFC7D8] text-sm sm:text-base sm:text-lg leading-relaxed max-w-lg mx-auto lg:mx-0">
               MERN Stack Developer with 1+ year experience building responsive web and mobile applications. Proficient in React.js, React Native, Node.js, Express.js, and MongoDB.
             </p>
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 pt-2 sm:pt-4 justify-center lg:justify-start">
               {/* Primary Button */}
-              <a href="#work" className="group relative px-6 py-3 sm:px-8 sm:py-3.5 rounded-full font-semibold overflow-hidden w-full sm:w-auto flex justify-center items-center">
-                <div className="absolute inset-0 bg-gradient-to-r from-[#FFFFFF] to-[#CFC7D8] rounded-full transition-all duration-300 group-hover:shadow-2xl group-hover:shadow-white/30"></div>
+              <a href="#work" className="group relative px-6 py-3 sm:px-8 sm:py-3.5 rounded-full font-semibold overflow-hidden w-full sm:w-auto flex justify-center items-center shadow-lg shadow-purple-500/20 dark:shadow-none">
+                <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-purple-500 dark:from-[#FFFFFF] dark:to-[#CFC7D8] rounded-full transition-all duration-300 group-hover:shadow-2xl group-hover:shadow-purple-500/40 dark:group-hover:shadow-white/30"></div>
                 <div className="absolute inset-0 rounded-full bg-gradient-to-r from-transparent via-white to-transparent opacity-0 group-hover:opacity-20 transition-all duration-500 translate-x-full group-hover:translate-x-0"></div>
-                <span className="relative text-[#1A0626] flex items-center space-x-2 group-hover:space-x-3 transition-all duration-300">
+                <span className="relative text-white dark:text-[#1A0626] flex items-center space-x-2 group-hover:space-x-3 transition-all duration-300">
                   <span>My Projects</span>
                   <ExternalLink size={18} className="group-hover:rotate-45 transition-transform duration-300" />
                 </span>
@@ -73,19 +73,19 @@ export default function HeroSection() {
                 href="https://res.cloudinary.com/dwwdodtcr/raw/upload/v1769600392/dmploi/resumes/egvhvq4nnhav89cu1xjo.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group relative px-6 py-3 sm:px-8 sm:py-3.5 rounded-full font-semibold border-2 border-[#E08AF0] overflow-hidden w-full sm:w-auto flex justify-center items-center"
+                className="group relative px-6 py-3 sm:px-8 sm:py-3.5 rounded-full font-semibold border-2 border-purple-200 dark:border-[#E08AF0] overflow-hidden w-full sm:w-auto flex justify-center items-center hover:border-purple-400 dark:hover:border-[#E08AF0] transition-colors"
               >
-                <div className="absolute inset-0 bg-gradient-to-r from-[#E08AF0]/20 to-[#B84FD6]/20 opacity-0 group-hover:opacity-100 transition-all duration-300 rounded-full"></div>
-                <span className="relative text-[#FFFFFF] flex items-center space-x-2 group-hover:space-x-3 transition-all duration-300">
+                <div className="absolute inset-0 bg-gradient-to-r from-purple-100/50 to-purple-50/50 dark:from-[#E08AF0]/20 dark:to-[#B84FD6]/20 opacity-0 group-hover:opacity-100 transition-all duration-300 rounded-full"></div>
+                <span className="relative text-gray-700 dark:text-[#FFFFFF] flex items-center space-x-2 group-hover:space-x-3 transition-all duration-300">
                   <span>Resume</span>
                   <Download size={18} className="group-hover:translate-y-1 transition-transform duration-300" />
                 </span>
               </a>
 
               {/* Secondary Button */}
-              <a href="#contact" className="group relative px-6 py-3 sm:px-8 sm:py-3.5 rounded-full font-semibold border-2 border-[#B84FD6] overflow-hidden w-full sm:w-auto flex justify-center items-center">
-                <div className="absolute inset-0 bg-gradient-to-r from-[#B84FD6]/20 to-[#E08AF0]/20 opacity-0 group-hover:opacity-100 transition-all duration-300 rounded-full"></div>
-                <span className="relative text-[#FFFFFF] flex items-center space-x-2 group-hover:space-x-3 transition-all duration-300">
+              <a href="#contact" className="group relative px-6 py-3 sm:px-8 sm:py-3.5 rounded-full font-semibold border-2 border-purple-200 dark:border-[#B84FD6] overflow-hidden w-full sm:w-auto flex justify-center items-center hover:border-purple-400 dark:hover:border-[#B84FD6] transition-colors">
+                <div className="absolute inset-0 bg-gradient-to-r from-purple-100/50 to-purple-50/50 dark:from-[#B84FD6]/20 dark:to-[#E08AF0]/20 opacity-0 group-hover:opacity-100 transition-all duration-300 rounded-full"></div>
+                <span className="relative text-gray-700 dark:text-[#FFFFFF] flex items-center space-x-2 group-hover:space-x-3 transition-all duration-300">
                   <span>Contact Me</span>
                   <Mail size={18} className="group-hover:-translate-y-1 transition-transform duration-300" />
                 </span>
@@ -96,20 +96,20 @@ export default function HeroSection() {
             <div className="flex flex-col items-center lg:items-start space-y-4 pt-4 sm:pt-6">
               <p className="text-[#9C8FB1] text-sm font-medium">Follow me:</p>
               <div className="flex gap-3 flex-wrap justify-center">
-                <a href="https://www.instagram.com/_decoding__life_" target="_blank" rel="noopener noreferrer" className="group relative w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-gradient-to-br from-[#FFFFFF]/10 to-[#FFFFFF]/5 border border-[#FFFFFF]/20 flex items-center justify-center hover:border-[#B84FD6]/60 transition-all duration-300 hover:shadow-lg hover:shadow-[#B84FD6]/30">
-                  <Instagram size={18} className="text-[#CFC7D8] group-hover:text-[#E08AF0] group-hover:scale-110 transition-all duration-300 sm:w-5 sm:h-5" />
+                <a href="https://www.instagram.com/_decoding__life_" target="_blank" rel="noopener noreferrer" className="group relative w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white border-2 border-gray-100 dark:bg-white/5 dark:border-[#FFFFFF]/20 flex items-center justify-center hover:border-purple-400 dark:hover:border-[#B84FD6]/60 transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/20 dark:hover:shadow-[#B84FD6]/30">
+                  <Instagram size={18} className="text-gray-500 dark:text-[#CFC7D8] group-hover:text-purple-600 dark:group-hover:text-[#E08AF0] group-hover:scale-110 transition-all duration-300 sm:w-5 sm:h-5" />
                 </a>
-                <a href="https://www.linkedin.com/in/jeeban-beura/" target="_blank" rel="noopener noreferrer" className="group relative w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-gradient-to-br from-[#FFFFFF]/10 to-[#FFFFFF]/5 border border-[#FFFFFF]/20 flex items-center justify-center hover:border-[#B84FD6]/60 transition-all duration-300 hover:shadow-lg hover:shadow-[#B84FD6]/30">
-                  <Linkedin size={18} className="text-[#CFC7D8] group-hover:text-[#E08AF0] group-hover:scale-110 transition-all duration-300 sm:w-5 sm:h-5" />
+                <a href="https://www.linkedin.com/in/jeeban-beura/" target="_blank" rel="noopener noreferrer" className="group relative w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white border-2 border-gray-100 dark:bg-white/5 dark:border-[#FFFFFF]/20 flex items-center justify-center hover:border-purple-400 dark:hover:border-[#B84FD6]/60 transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/20 dark:hover:shadow-[#B84FD6]/30">
+                  <Linkedin size={18} className="text-gray-500 dark:text-[#CFC7D8] group-hover:text-purple-600 dark:group-hover:text-[#E08AF0] group-hover:scale-110 transition-all duration-300 sm:w-5 sm:h-5" />
                 </a>
-                <a href="https://github.com/jeebanbeura" target="_blank" rel="noopener noreferrer" className="group relative w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-gradient-to-br from-[#FFFFFF]/10 to-[#FFFFFF]/5 border border-[#FFFFFF]/20 flex items-center justify-center hover:border-[#B84FD6]/60 transition-all duration-300 hover:shadow-lg hover:shadow-[#B84FD6]/30">
-                  <Github size={18} className="text-[#CFC7D8] group-hover:text-[#E08AF0] group-hover:scale-110 transition-all duration-300 sm:w-5 sm:h-5" />
+                <a href="https://github.com/jeebanbeura" target="_blank" rel="noopener noreferrer" className="group relative w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white border-2 border-gray-100 dark:bg-white/5 dark:border-[#FFFFFF]/20 flex items-center justify-center hover:border-purple-400 dark:hover:border-[#B84FD6]/60 transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/20 dark:hover:shadow-[#B84FD6]/30">
+                  <Github size={18} className="text-gray-500 dark:text-[#CFC7D8] group-hover:text-purple-600 dark:group-hover:text-[#E08AF0] group-hover:scale-110 transition-all duration-300 sm:w-5 sm:h-5" />
                 </a>
-                <a href="https://www.facebook.com/profile.php?id=61550493356002" target="_blank" rel="noopener noreferrer" className="group relative w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-gradient-to-br from-[#FFFFFF]/10 to-[#FFFFFF]/5 border border-[#FFFFFF]/20 flex items-center justify-center hover:border-[#B84FD6]/60 transition-all duration-300 hover:shadow-lg hover:shadow-[#B84FD6]/30">
-                  <Facebook size={18} className="text-[#CFC7D8] group-hover:text-[#E08AF0] group-hover:scale-110 transition-all duration-300 sm:w-5 sm:h-5" />
+                <a href="https://www.facebook.com/profile.php?id=61550493356002" target="_blank" rel="noopener noreferrer" className="group relative w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white border-2 border-gray-100 dark:bg-white/5 dark:border-[#FFFFFF]/20 flex items-center justify-center hover:border-purple-400 dark:hover:border-[#B84FD6]/60 transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/20 dark:hover:shadow-[#B84FD6]/30">
+                  <Facebook size={18} className="text-gray-500 dark:text-[#CFC7D8] group-hover:text-purple-600 dark:group-hover:text-[#E08AF0] group-hover:scale-110 transition-all duration-300 sm:w-5 sm:h-5" />
                 </a>
-                <a href="mailto:jb.jeebanbeura@gmail.com" className="group relative w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-gradient-to-br from-[#FFFFFF]/10 to-[#FFFFFF]/5 border border-[#FFFFFF]/20 flex items-center justify-center hover:border-[#B84FD6]/60 transition-all duration-300 hover:shadow-lg hover:shadow-[#B84FD6]/30">
-                  <Mail size={18} className="text-[#CFC7D8] group-hover:text-[#E08AF0] group-hover:scale-110 transition-all duration-300 sm:w-5 sm:h-5" />
+                <a href="mailto:jb.jeebanbeura@gmail.com" className="group relative w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white border-2 border-gray-100 dark:bg-white/5 dark:border-[#FFFFFF]/20 flex items-center justify-center hover:border-purple-400 dark:hover:border-[#B84FD6]/60 transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/20 dark:hover:shadow-[#B84FD6]/30">
+                  <Mail size={18} className="text-gray-500 dark:text-[#CFC7D8] group-hover:text-purple-600 dark:group-hover:text-[#E08AF0] group-hover:scale-110 transition-all duration-300 sm:w-5 sm:h-5" />
                 </a>
               </div>
             </div>
@@ -177,7 +177,7 @@ export default function HeroSection() {
             <div className="w-8 h-12 rounded-full border-2 border-[#B84FD6] flex justify-center p-2 animate-bounce">
               <ChevronDown size={20} className="text-[#B84FD6] group-hover:text-[#E08AF0] transition-colors duration-300 animate-bounce" />
             </div>
-            <p className="text-[#CFC7D8] text-xs mt-4 text-center group-hover:text-[#E08AF0] transition-colors duration-300">Scroll down</p>
+            <p className="text-gray-500 dark:text-[#CFC7D8] text-xs mt-4 text-center group-hover:text-purple-600 dark:group-hover:text-[#E08AF0] transition-colors duration-300">Scroll down</p>
           </div>
         </div>
       </div>

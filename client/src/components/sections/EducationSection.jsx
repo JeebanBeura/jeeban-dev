@@ -76,16 +76,16 @@ export default function EducationSection() {
   ];
 
   return (
-    <section id='education' className="relative bg-gradient-to-br from-[#1A0626] via-[#4B0F6B] to-[#8A2BAE] py-20 px-4 overflow-hidden">
-      <div className="absolute top-0 right-0 w-96 h-96 bg-[#B84FD6] rounded-full opacity-10 blur-3xl"></div>
-      <div className="absolute bottom-0 left-0 w-80 h-80 bg-[#E08AF0] rounded-full opacity-10 blur-3xl"></div>
+    <section id='education' className="relative bg-gradient-to-br from-purple-50 via-white to-purple-50 dark:from-[#1A0626] dark:via-[#4B0F6B] dark:to-[#8A2BAE] py-20 px-4 overflow-hidden transition-colors duration-300">
+      <div className="absolute top-0 right-0 w-96 h-96 bg-purple-300 dark:bg-[#B84FD6] rounded-full opacity-20 dark:opacity-10 blur-3xl"></div>
+      <div className="absolute bottom-0 left-0 w-80 h-80 bg-purple-300 dark:bg-[#E08AF0] rounded-full opacity-20 dark:opacity-10 blur-3xl"></div>
 
       <div className="max-w-6xl mx-auto relative z-10">
         <div className="text-center mb-16">
-          <h2 className="text-4xl sm:text-5xl font-bold text-white mb-4">
+          <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 dark:text-white mb-4">
             My <span className="bg-gradient-to-r from-[#D06BE3] to-[#E08AF0] bg-clip-text text-transparent">Education</span>
           </h2>
-          <p className="text-[#CFC7D8] max-w-2xl mx-auto">
+          <p className="text-gray-600 dark:text-[#CFC7D8] max-w-2xl mx-auto">
             Building expertise through continuous learning and professional development
           </p>
         </div>
@@ -107,14 +107,14 @@ export default function EducationSection() {
                     {isLeft && (
                       <div
                         onClick={() => setExpandedId(isExpanded ? null : edu.id)}
-                        className="w-full max-w-xl cursor-pointer rounded-2xl bg-[#2A0A3D]/60 backdrop-blur-md border border-[#B84FD6]/40 p-6 hover:border-[#B84FD6]/80 transition text-left md:text-right"
+                        className="w-full max-w-xl cursor-pointer rounded-2xl bg-white dark:bg-[#2A0A3D]/60 backdrop-blur-md border border-purple-200 dark:border-[#B84FD6]/40 p-6 hover:border-purple-400 dark:hover:border-[#B84FD6]/80 transition text-left md:text-right shadow-lg dark:shadow-none"
                       >
-                        <h3 className="text-white font-bold text-xl mb-1">{edu.degree}</h3>
-                        <p className="text-[#CFC7D8] mb-2">{edu.institution}</p>
-                        <p className="text-[#9C8FB1] text-sm">{edu.year} • {edu.location}</p>
+                        <h3 className="text-gray-900 dark:text-white font-bold text-xl mb-1">{edu.degree}</h3>
+                        <p className="text-gray-600 dark:text-[#CFC7D8] mb-2">{edu.institution}</p>
+                        <p className="text-gray-500 dark:text-[#9C8FB1] text-sm">{edu.year} • {edu.location}</p>
 
                         {isExpanded && (
-                          <ul className="mt-4 space-y-2 text-sm text-[#CFC7D8] inline-block text-left">
+                          <ul className="mt-4 space-y-2 text-sm text-gray-600 dark:text-[#CFC7D8] inline-block text-left">
                             {edu.achievements.map((a, i) => (
                               <li key={i}>• {a}</li>
                             ))}
@@ -128,7 +128,7 @@ export default function EducationSection() {
 
                   {/* Icon - Left on Mobile, Center on Desktop */}
                   <div className="absolute left-8 md:left-1/2 top-0 md:top-6 -translate-x-1/2 z-10">
-                    <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#D06BE3] to-[#E08AF0] flex items-center justify-center border-4 border-[#1A0626]">
+                    <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#D06BE3] to-[#E08AF0] flex items-center justify-center border-4 border-white dark:border-[#1A0626]">
                       <Icon size={20} className="text-white" />
                     </div>
                   </div>
@@ -138,14 +138,14 @@ export default function EducationSection() {
                     {!isLeft && (
                       <div
                         onClick={() => setExpandedId(isExpanded ? null : edu.id)}
-                        className="w-full max-w-xl cursor-pointer rounded-2xl bg-[#2A0A3D]/60 backdrop-blur-md border border-[#B84FD6]/40 p-6 hover:border-[#B84FD6]/80 transition text-left"
+                        className="w-full max-w-xl cursor-pointer rounded-2xl bg-white dark:bg-[#2A0A3D]/60 backdrop-blur-md border border-purple-200 dark:border-[#B84FD6]/40 p-6 hover:border-purple-400 dark:hover:border-[#B84FD6]/80 transition text-left shadow-lg dark:shadow-none"
                       >
-                        <h3 className="text-white font-bold text-xl mb-1">{edu.degree}</h3>
-                        <p className="text-[#CFC7D8] mb-2">{edu.institution}</p>
-                        <p className="text-[#9C8FB1] text-sm">{edu.year} • {edu.location}</p>
+                        <h3 className="text-gray-900 dark:text-white font-bold text-xl mb-1">{edu.degree}</h3>
+                        <p className="text-gray-600 dark:text-[#CFC7D8] mb-2">{edu.institution}</p>
+                        <p className="text-gray-500 dark:text-[#9C8FB1] text-sm">{edu.year} • {edu.location}</p>
 
                         {isExpanded && (
-                          <ul className="mt-4 space-y-2 text-sm text-[#CFC7D8]">
+                          <ul className="mt-4 space-y-2 text-sm text-gray-600 dark:text-[#CFC7D8]">
                             {edu.achievements.map((a, i) => (
                               <li key={i}>• {a}</li>
                             ))}
