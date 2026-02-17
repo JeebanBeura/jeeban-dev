@@ -7,32 +7,66 @@ export default function ProjectsSection() {
   const projects = [
     {
       id: 1,
-      title: 'E-Tech Education Platform',
-      category: 'Full Stack',
-      description: 'Course management, attendance tracking, and automated scheduling system with secure JWT authentication.',
-      image: 'https://images.unsplash.com/photo-1546410531-bb4caa6b424d?w=500&h=500&fit=crop',
-      color: 'from-blue-500 to-purple-600',
-      tags: ['React', 'Node.js', 'MongoDB', 'Express']
+      title: "Avataaz – Company Landing Page",
+      category: "Landing Page",
+      description:
+        "Modern company landing page with responsive layout, sections for services, contact form, and smooth navigation.",
+      image:
+        "https://images.unsplash.com/photo-1546410531-bb4caa6b424d?w=500&h=500&fit=crop",
+      color: "from-blue-500 to-purple-600",
+      tags: ["React", "Tailwind CSS", "Responsive UI"],
+      href: "https://www.avataaz.com/",
     },
     {
       id: 2,
-      title: 'Tour & Travel Booking',
-      category: 'Web App',
-      description: 'Comprehensive booking system with package management, payment gateway integration, and diverse user roles.',
-      image: 'https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=500&h=500&fit=crop',
-      color: 'from-orange-500 to-red-600',
-      tags: ['React', 'Tailwind CSS', 'REST API']
+      title: "Trade Ridge Academy – Training Courses",
+      category: "Education Website",
+      description:
+        "Online training platform showcasing courses, batches, and student onboarding with clean UI.",
+      image:
+        "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=500&h=500&fit=crop",
+      color: "from-emerald-500 to-teal-600",
+      tags: ["React", "Tailwind CSS", "Web App"],
+      href: "https://trade-ridge-academyv1.vercel.app/",
     },
     {
       id: 3,
-      title: 'Real Estate Platform',
-      category: 'Web App',
-      description: 'Property search platform with advanced filters and inquiry submission forms.',
-      image: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=500&h=500&fit=crop',
-      color: 'from-indigo-500 to-purple-600',
-      tags: ['React', 'CSS3', 'Forms']
-    }
+      title: "Kalyon Estate – Real Estate Website",
+      category: "Real Estate",
+      description:
+        "Property listing platform with property details, inquiry forms, and mobile-friendly design.",
+      image:
+        "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=500&h=500&fit=crop",
+      color: "from-indigo-500 to-purple-600",
+      tags: ["React", "Tailwind CSS", "Forms"],
+      href: "https://www.kalyonestate.in/",
+    },
+    {
+      id: 4,
+      title: "Bijaya Laxmi Classes – Education Site",
+      category: "Education Website",
+      description:
+        "Coaching institute website with course details, contact section, and admission info.",
+      image:
+        "https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=500&h=500&fit=crop",
+      color: "from-orange-500 to-red-600",
+      tags: ["React", "Tailwind CSS", "Landing Page"],
+      href: "https://www.bijayalaxmiclasses.in/",
+    },
+    {
+      id: 5,
+      title: "DMploi – Job Seeker Android App",
+      category: "Mobile App",
+      description:
+        "Android app for job seekers with job listing, apply flow, and basic profile management.",
+      image:
+        "https://images.unsplash.com/photo-1551650975-87deedd944c3?w=500&h=500&fit=crop",
+      color: "from-pink-500 to-rose-600",
+      tags: ["React Native", "Android", "REST API"],
+      href: "https://play.google.com/store/apps/details?id=com.dmploiapp&hl=en_IN",
+    },
   ];
+
 
   return (
     <section id="work" className="relative bg-gradient-to-br from-purple-50 via-white to-purple-50 dark:from-[#1A0626] dark:via-[#4B0F6B] dark:to-[#8A2BAE] py-20 px-4 sm:px-6 lg:px-8 overflow-hidden transition-colors duration-300">
@@ -79,19 +113,19 @@ export default function ProjectsSection() {
                   {/* Hover Overlay with Links */}
                   <div className="absolute inset-0 bg-gradient-to-br from-[#D06BE3]/40 to-[#E08AF0]/40 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-center justify-center space-x-4">
                     <a
-                      href="#"
+                      href={project.href}
                       className="p-3 rounded-full bg-white/20 backdrop-blur-md border border-white/30 hover:bg-white/30 transition-all duration-300 hover:scale-110"
                       title="View Project"
                     >
                       <ExternalLink size={20} className="text-white" />
                     </a>
-                    <a
+                    {/* <a
                       href="#"
                       className="p-3 rounded-full bg-white/20 backdrop-blur-md border border-white/30 hover:bg-white/30 transition-all duration-300 hover:scale-110"
                       title="View Code"
                     >
                       <Github size={20} className="text-white" />
-                    </a>
+                    </a> */}
                   </div>
 
                   {/* Category Badge */}
